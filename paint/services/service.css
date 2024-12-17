@@ -1,0 +1,436 @@
+/* Reset some basic styling */
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Eagle+Lake&family=Playwrite+DE+VA+Guides&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+/* Navigation Styles */
+#nav-home {
+  position: relative;
+  background: url("../assets/bg1.jpg") no-repeat center center/cover;
+  height: 100vh;
+}
+
+/* Overlay with light black background */
+#nav-home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Light black background overlay */
+  z-index: 0;
+}
+
+/* Navigation Bar */
+nav {
+  z-index: 2;
+  position: relative;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  z-index: 1;
+}
+
+nav .logo {
+  color: #e6f517;
+  font-size: 38px;
+  font-weight: 900;
+  text-decoration: none;
+  font-family: "Eagle Lake", serif;
+  font-weight: 400;
+  span {
+    font-size: 28px;
+  }
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none; /* Hidden on desktop */
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 3;
+}
+
+.hamburger .bar {
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Change hamburger appearance on open */
+.hamburger.open .bar:nth-child(1) {
+  transform: rotate(-45deg);
+  position: relative;
+  top: 8px;
+}
+
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+  transform: rotate(45deg);
+  position: relative;
+  top: -8px;
+}
+
+/* Navigation links */
+#nav-links {
+  display: flex; /* On larger screens, nav links will be displayed */
+  list-style: none;
+  flex-direction: row;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #d1ff04;
+}
+
+/* Mobile menu styles */
+@media (max-width: 768px) {
+  /* Show the hamburger icon on mobile */
+  .hamburger {
+    display: block;
+  }
+
+  #nav-links {
+    display: none; /* Initially hide on mobile */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 80px;
+    height: 100vh;
+  }
+  nav .logo {
+    font-size: 25px;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin-bottom: 40px;
+  }
+
+  nav ul li a {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+  }
+
+  /* When the menu is active, show the navigation */
+  #nav-links.active {
+    display: flex;
+  }
+}
+
+/* Hero Section Styles */
+#home {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  /* Adjust font size of hero content */
+  .hero-content h1 {
+    font-size: 28px; /* Reduced font size for h1 */
+  }
+} /* Service Container */ /* Service Container */
+
+
+#service-container {
+  padding: 60px;
+  background-color: #f4faff; /* Light blue overall section background */
+}
+
+/* Cards Container */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 40px;
+}
+
+/* Card Styling */
+.card {
+  position: relative; /* Position for overlay and link */
+  display: flex;
+  flex-direction: column-reverse; /* Text above the image */
+  background-color: #e7f3ff; /* Light blue background for cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: background-color 0.3s, transform 0.3s ease-in-out; /* Smooth transition */
+  height: 100%; /* Consistent height */
+}
+
+.card:hover {
+  background-color: #cde7ff; /* Deeper blue shade on hover */
+  transform: translateY(-10px); /* Slight lift effect */
+}
+
+/* Card Image */
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Perfect fit for the image */
+  flex: 1; /* Fill remaining space */
+}
+
+/* Anchor Link Styling */
+.card-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* Transparent overlay for link */
+  z-index: 2; /* Position it on top of image and text */
+  display: block;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Hover Effect for Card Link */
+.card:hover .card-link {
+  background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent on hover */
+}
+
+/* Overlay with Pseudo Elements */
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0; /* Initially hidden */
+  z-index: 1;
+}
+
+.card::before {
+  background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent overlay */
+}
+
+.card::after {
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff; /* Text color */
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0; /* Initially hidden */
+}
+
+/* Show Overlay and Text on Hover */
+.card:hover::before,
+.card:hover::after {
+  opacity: 1;
+}
+
+/* Card Text Content */
+.card-text {
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Semi-transparent white background */
+  z-index: 2;
+}
+
+.card-text h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #004880; /* Deep blue heading */
+  transition: color 0.3s ease-in-out;
+}
+
+.card-text h5 {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Hover Text Color */
+.card:hover .card-text h1 {
+  color: #0066cc; /* Brighter blue */
+}
+
+.card:hover .card-text h5 {
+  color: #0056a3;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row for tablets */
+  }
+
+  .card img {
+    height: 250px; /* Adjusted for tablet screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr; /* Single column for mobile */
+  }
+
+  .card img {
+    height: 200px; /* Smaller images for mobile */
+  }
+
+  .card-text h1 {
+    font-size: 18px; /* Smaller heading */
+  }
+
+  .card-text h5 {
+    font-size: 12px; /* Smaller text */
+  }
+}
+
+footer {
+  background-color: #004880; /* Match with your company's theme */
+  padding: 20px 0;
+  text-align: center;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer .contact-info {
+  margin-top: 20px;
+}
+
+footer .contact-info p {
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+footer .contact-info a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+footer .contact-info span {
+  font-style: italic;
+}
+
+footer .social-icons {
+  margin-top: 15px;
+}
+
+footer .social-icons a {
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0 10px;
+  font-size: 24px;
+}
+
+footer .social-icons a:hover {
+  color: #cde7ff; /* Lighter hover effect */
+}
+
+@media (max-width: 768px) {
+  footer .container p {
+    font-size: 14px;
+  }
+
+  footer .contact-info p {
+    font-size: 12px;
+  }
+
+  footer .social-icons a {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer .container p {
+    font-size: 12px;
+  }
+
+  footer .contact-info p {
+    font-size: 10px;
+  }
+
+  footer .social-icons a {
+    font-size: 18px;
+  }
+}

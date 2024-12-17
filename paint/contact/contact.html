@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+    <div id="nav-home">
+        <!-- Navigation Bar -->
+        <nav>
+            <div class="container">
+                <a href="../index.html" class="logo">Gurukrupa</a>
+
+                <!-- Hamburger Icon for mobile -->
+                <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+
+                <!-- Navigation Links -->
+                <ul id="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../services/service.html">Services</a></li>
+                    <li><a href="../gallery/gallery.html">Gallery</a></li>
+                    <li><a href="../about/about.html">About Us</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <section id="home">
+            <div class="hero-content">
+                <h1>Contact Us</h1>
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- contact -->
+    <section id="contact">
+        <div class="container">
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d120562.31417576144!2d72.91905858389951!3d19.213873535905098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sIndia%20022%2C%20Mumbai%2C%20Thane%2C%20Mumbai%2C%20India!5e0!3m2!1sen!2sin!4v1734438585362!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <form action="https://formspree.io/f/xrbgwlew" method="POST">
+                <input type="text" id="name" placeholder="Your Name" name="name" required>
+                <input type="email" id="email" placeholder="Your Email" name="email" required>
+                <textarea id="message" placeholder="Your Message" name="message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="contact-info">
+                <p><strong>Contact Us:</strong></p>
+                <p>Phone: <a href="tel:+91 9969441237">+91 9969441237</a></p>
+                <p>Phone: <a href="tel:+91 9594809030">+91 9594809030</a></p>
+                <p>Address: <span>Mumbai, Thane, Maharashtra, India</span></p>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank" class="social-icon"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="https://wa.me/9594809030" target="_blank" class="social-icon"><i
+                        class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon"><i
+                        class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2024 Gurukrupa Paint Company. All rights reserved. Serving Mumbai, Thane, and Maharashtra.</p>
+        </div>
+    </footer>
+</body>
+<script src="../script.js"></script>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./service.css">
+</head>
+
+<body>
+    <div id="nav-home">
+        <!-- Navigation Bar -->
+        <nav>
+            <div class="container">
+                <a href="../index.html" class="logo">Gurukrupa</a>
+
+                <!-- Hamburger Icon for mobile -->
+                <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+
+                <!-- Navigation Links -->
+                <ul id="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="../gallery/gallery.html">Gallery</a></li>
+                    <li><a href="../about/about.html">About Us</a></li>
+                    <li><a href="../contact/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Home Section (Hero Content) -->
+        <section id="home">
+            <div class="hero-content">
+                <h1>Our Services</h1>
+            </div>
+        </section>
+    </div>
+    <section id="service-container">
+        <div class="cards">
+            <div class="card">
+                <div class="card-text">
+                    <h1>Interior Painting</h1>
+                    <h5>Transform your home with high-quality, elegant interior painting services.</h5>
+                </div>
+                <img src="../assets/ab.webp" alt="Interior Painting">
+                <a href="../services/interior/interior.html" class="card-link"></a>
+                <!-- Added a class to anchor tags -->
+            </div>
+            <div class="card">
+                <div class="card-text">
+                    <h1>Exterior Painting</h1>
+                    <h5>Durable and beautiful exterior painting for a long-lasting impression.</h5>
+                </div>
+                <img src="../assets/ab.webp" alt="Exterior Painting">
+                <a href="../services/exterior/exterior.html" class="card-link"></a>
+                <!-- Added a class to anchor tags -->
+            </div>
+            <div class="card">
+                <div class="card-text">
+                    <h1>House Painting</h1>
+                    <h5>Durable and beautiful exterior painting for a long-lasting impression.</h5>
+                </div>
+                <img src="../assets/ab.webp" alt="Exterior Painting">
+                <a href="../services/house/house.html" class="card-link"></a> <!-- Added a class to anchor tags -->
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="contact-info">
+                <p><strong>Contact Us:</strong></p>
+                <p>Phone: <a href="tel:+91 9969441237">+91 9969441237</a></p>
+                <p>Phone: <a href="tel:+91 9594809030">+91 9594809030</a></p>
+                <p>Address: <span>Mumbai, Thane, Maharashtra, India</span></p>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank" class="social-icon"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="https://wa.me/9594809030" target="_blank" class="social-icon"><i
+                        class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon"><i
+                        class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2024 Gurukrupa Paint Company. All rights reserved. Serving Mumbai, Thane, and Maharashtra.</p>
+        </div>
+    </footer>
+
+</body>
+<script src="script.js"></script>
+
+</html>
