@@ -2,224 +2,576 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gurukrupa Paint</title>
-    <link rel="stylesheet" href="./gallery/gallery.css">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gurukrupa Paint - Mumbai's #1 interior painting contractor. Expert interior, exterior and house painting services across Mumbai, Thane and Maharashtra.">
+  <title>Gurukrupa Paint - #1 Interior Painting Contractor in Mumbai & Thane</title>
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
-    <!-- nav and hero -->
-    <div id="nav-home">
-        <!-- Navigation Bar -->
-        <nav>
-            <div class="container">
-                <a href="#home" class="logo">Gurukrupa</a>
 
-                <!-- Hamburger Icon for mobile -->
-                <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="./index.html" class="nav-logo">
+        <span class="nav-logo-icon"><i class="fa-solid fa-paint-roller"></i></span>
+        Gurukrupa
+      </a>
 
-                <!-- Navigation Links -->
-                <ul id="nav-links">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="./services/service.html">Services</a></li>
-                    <li><a href="../gallery/gallery.html">Gallery</a></li>
-                    <li><a href="./about/about.html">About Us</a></li>
-                    <li><a href="../contact/contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
+      <ul class="nav-menu">
+        <li><a href="./index.html" class="nav-link">Home</a></li>
+        <li><a href="./services/service.html" class="nav-link">Services</a></li>
+        <li><a href="./services/interior/interior.html" class="nav-link">Interior</a></li>
+        <li><a href="./gallery/gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="./about/about.html" class="nav-link">About</a></li>
+        <li><a href="./contact/contact.html" class="nav-link">Contact</a></li>
+      </ul>
 
-        <!-- Home Section (Hero Content) -->
-        <section id="home">
-            <div class="hero-content">
-                <h1>Your Trusted Painting Contractor</h1>
-                <p>Enhancing homes and businesses with expert painting services</p>
-                <p class="Schedule">Schedule Your Free Estimate</p>
-                <a href="tel:+919594809030">
-                    <button class="hero-btn">Call 91 9594809030</button>
-                </a>
-            </div>
-        </section>
+      <a href="tel:+919594809030" class="nav-cta">
+        <i class="fa-solid fa-phone"></i> +91 9594809030
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </nav>
 
-    <section id="near-header">
-        <div class="card-tem">
-            <h5>Superior Craftsmanship</h5>
-            <p>We work hard to continuously deliver first-rate home and commercial painting services.</p>
+  <div class="mobile-menu-overlay"></div>
+  <div class="mobile-menu">
+    <ul class="mobile-menu-list">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./services/service.html">Services</a></li>
+      <li><a href="./services/interior/interior.html">Interior</a></li>
+      <li><a href="./gallery/gallery.html">Gallery</a></li>
+      <li><a href="./about/about.html">About</a></li>
+      <li><a href="./contact/contact.html">Contact</a></li>
+    </ul>
+    <div class="mobile-menu-cta">
+      <a href="tel:+919594809030" class="btn btn-primary">
+        <i class="fa-solid fa-phone"></i> Call Now
+      </a>
+      <a href="https://wa.me/919594809030" class="btn btn-secondary" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero with Interior Focus -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <span class="hero-eyebrow">Mumbai's Trusted Interior Painters · Since 1992</span>
+            <h1 class="hero-title">
+              Beautiful <span class="highlight">interiors</span> start with the right painters
+            </h1>
+            <p class="hero-description">
+              We specialize in transforming homes and businesses across Mumbai, Thane and Maharashtra
+              with flawless interior painting, premium materials, and craftsmanship you can see in every stroke.
+            </p>
+            <div class="hero-actions">
+              <a href="tel:+919594809030" class="btn btn-primary btn-lg">
+                <i class="fa-solid fa-phone"></i> Get Free Estimate
+              </a>
+              <a href="./services/interior/interior.html" class="btn btn-ghost btn-lg">
+                Interior Services <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <div class="hero-stat-number" data-counter="30" data-suffix="+">0</div>
+                <div class="hero-stat-label">Years of Experience</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-number" data-counter="2500" data-suffix="+">0</div>
+                <div class="hero-stat-label">Projects Completed</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-number" data-counter="100" data-suffix="%">0</div>
+                <div class="hero-stat-label">Satisfaction Guarantee</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-image">
+            <img src="./assets/images/hero-1.jpg" alt="Modern living room interior">
+            <img src="./assets/images/hero-2.jpg" alt="Bedroom interior painting">
+            <img src="./assets/images/hero-3.jpg" alt="Kitchen interior">
+          </div>
         </div>
-        <div class="card-tem">
-            <h5>Competitive Pricing</h5>
-            <p>We check competitors' prices to ensure you get the best value for your money.</p>
-        </div>
-        <div class="card-tem">
-            <h5>Quality Paint</h5>
-            <p>We utilize only the best and longest lasting paint.</p>
-        </div>
+      </div>
     </section>
 
-    <!-- About index -->
-    <section id="about-index">
-        <div class="content">
-            <h5>When it Comes To Painting... </h5>
-            <h3>Our Work Is Nothing Short Of Stunning.</h3>
-            <p>Since 1992, Gurukrupa Painting has delivered first-rate home and commercial painting services to
-                residents and business owners of the Twin Cities.</p>
-            <a href="./about/about.html">Learn more</a>
+    <!-- Why Choose Us -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Why Gurukrupa</span>
+          <h2 class="section-title">The Painting Contractor You Can Trust</h2>
+          <p class="section-subtitle">
+            Three decades of trusted craftsmanship, transparent pricing, and premium materials make us
+            the preferred painting contractor across Mumbai, Thane and Maharashtra.
+          </p>
         </div>
+
+        <div class="features-grid">
+          <div class="feature-card reveal">
+            <div class="feature-icon"><i class="fa-solid fa-award"></i></div>
+            <h3 class="feature-title">30+ Years Experience</h3>
+            <p class="feature-description">
+              First-rate home and commercial painting services delivered with the
+              same care and attention since 1992.
+            </p>
+          </div>
+
+          <div class="feature-card reveal reveal-delay-1">
+            <div class="feature-icon"><i class="fa-solid fa-paint-can"></i></div>
+            <h3 class="feature-title">Premium Paints</h3>
+            <p class="feature-description">
+              We use only the best, longest-lasting paint and premium materials
+              for a finish that stands the test of time.
+            </p>
+          </div>
+
+          <div class="feature-card reveal reveal-delay-2">
+            <div class="feature-icon"><i class="fa-solid fa-handshake"></i></div>
+            <h3 class="feature-title">Owner-Supervised</h3>
+            <p class="feature-description">
+              Every project is personally supervised by the owner — your satisfaction
+              is our reputation, and we take that seriously.
+            </p>
+          </div>
+
+          <div class="feature-card reveal reveal-delay-3">
+            <div class="feature-icon"><i class="fa-solid fa-tags"></i></div>
+            <h3 class="feature-title">Fair, Honest Pricing</h3>
+            <p class="feature-description">
+              We check competitors' prices to ensure you get the best value for
+              your money — without compromising on quality.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- About near -->
-    <section id="about-near">
-        <div class="top">
-            <div class="content">
-                <h5>Our Guarantee</h5>
-                <h3>The highest quality painting services at the lowest possible price.</h3>
-                <p>If there is a specific aspect of the job in which you are not 100 percent satisfied with, you can
-                    discuss the matter directly with the company owner and the issue will be resolved rapidly.</p>
-            </div>
-            <div class="image">
-                <img src="./assets/bg3.jpg" alt="">
-            </div>
-        </div>
-
-        <div class="middle">
-            <div class="image">
-                <img src="./assets/bg3.jpg" alt="">
-            </div>
-            <div class="content">
-                <h5>One-On-One</h5>
-                <h3>We work with you to fully understand your vision.</h3>
-                <p>We are enthused by the idea of working on an innovative and challenging interior or exterior project.
-                    Our experts can help you discover what design best complements your specific tastes and personality.
-                </p>
-            </div>
-        </div>
-
-        <div class="bottom">
-            <h5>The Difference</h5>
-            <h3>We have superior craftsmanship from skilled painting contractors and offer competitive pricing. We
-                always utilize the best and longest lasting paint for both commercial and residential services!</h3>
-            <a href="./about/about.html">Learn More</a>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <h4>Do you need a painter? We offer the following services:</h4>
-            <div class="service-boxes">
-                <!-- Service Item 1: Interior Painting -->
-                <div class="service-item">
-                    <a style="text-decoration: none; color: black;" href="./services/interior/interior.html">
-                        <i class="fa fa-paint-brush"></i>
-                        <h3>Interior Painting</h3>
-                        <p>Our Commercial + House Painters perform striking work for every interior painting project.
-                        </p>
-                    </a>
+    <!-- Interior Showcase (Featured Section) -->
+    <section class="section interior-showcase">
+      <div class="container">
+        <div class="interior-showcase-grid">
+          <div class="reveal">
+            <div class="interior-image-stack">
+              <img class="img-1" src="./assets/images/hero-2.jpg" alt="Modern bedroom interior">
+              <img class="img-2" src="./assets/images/interior-2.jpg" alt="Living room design">
+              <img class="img-3" src="./assets/images/interior-1.jpg" alt="Modern interior design">
+              <div class="img-badge">
+                <div class="badge-icon"><i class="fa-solid fa-trophy"></i></div>
+                <div class="badge-text">
+                  <strong>Interior Specialists</strong>
+                  <span>Mumbai's most trusted</span>
                 </div>
-
-                <!-- Service Item 2: Exterior Painting -->
-                <div class="service-item">
-                    <a style="text-decoration: none; color: black;" href="./services/exterior/exterior.html">
-                        <i class="fa-solid fa-fill-drip"></i>
-                        <h3>Exterior Painting</h3>
-                        <p>Our wide-ranging exterior painting services enhance the visual appeal of your residence or
-                            place of business.</p>
-                    </a>
-                </div>
-
-                <!-- Service Item 3: House Painting -->
-                <div class="service-item">
-                    <a style="text-decoration: none; color: black;" href="./services/house/house.html">
-                        <i class="fa fa-home"></i>
-                        <h3>House Painting</h3>
-                        <p>We offer an extensive range of professional house painting services.</p>
-                    </a>
-                </div>
+              </div>
             </div>
+          </div>
+
+          <div class="reveal reveal-delay-1">
+            <span class="section-eyebrow">Our Specialty</span>
+            <h2 class="section-title">Interior Painting, Done Right</h2>
+            <p class="section-subtitle" style="margin-bottom: 20px;">
+              Interior painting is our bread and butter — and it shows. From a single accent wall to a
+              complete home transformation, our painters bring years of experience, an eye for detail, and
+              the kind of care that only comes from genuine craftsmanship.
+            </p>
+
+            <div class="interior-features">
+              <div class="interior-feature-item">
+                <div class="ifi-icon"><i class="fa-solid fa-palette"></i></div>
+                <div class="ifi-content">
+                  <h5>Color Consultation</h5>
+                  <p>We'll help you pick the perfect palette for your space.</p>
+                </div>
+              </div>
+
+              <div class="interior-feature-item">
+                <div class="ifi-icon"><i class="fa-solid fa-broom"></i></div>
+                <div class="ifi-content">
+                  <h5>Meticulous Preparation</h5>
+                  <p>Furniture protected, walls cleaned, primed, and ready.</p>
+                </div>
+              </div>
+
+              <div class="interior-feature-item">
+                <div class="ifi-icon"><i class="fa-solid fa-paint-roller"></i></div>
+                <div class="ifi-content">
+                  <h5>Premium Application</h5>
+                  <p>Even coats, crisp lines, flawless finish — guaranteed.</p>
+                </div>
+              </div>
+
+              <div class="interior-feature-item">
+                <div class="ifi-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <div class="ifi-content">
+                  <h5>Satisfaction Guaranteed</h5>
+                  <p>If anything isn't right, we make it right — period.</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="./services/interior/interior.html" class="btn btn-primary btn-lg" style="margin-top: 32px;">
+              Explore Interior Services <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery">
-        <div class="container">
-            <h2>Our Work</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="./assets/bg3.jpg" alt="">
-                </div>
-                <div class="gallery-item">
-                    <img src="./assets/aboutbg.jpg" alt="Painting Project 2">
-                </div>
-                <div class="gallery-item">
-                    <img src="./assets/Untitled-design-2023-11-18T165621.330-1-768x419.webp" alt="Painting Project 3">
-                </div>
-            </div>
-            <a href="./gallery/gallery.html">View More</a>
+    <!-- Room Categories -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">What We Paint</span>
+          <h2 class="section-title">Every Room, Transformed</h2>
+          <p class="section-subtitle">
+            From kitchens to bedrooms, living rooms to bathrooms — we paint every
+            space in your home with the same dedication to excellence.
+          </p>
         </div>
+
+        <div class="room-categories">
+          <div class="room-category reveal">
+            <img src="./assets/images/bedroom.jpg" alt="Bedroom painting">
+            <div class="room-category-content">
+              <h5>Bedrooms</h5>
+              <span><i class="fa-solid fa-arrow-right"></i> View work</span>
+            </div>
+          </div>
+
+          <div class="room-category reveal reveal-delay-1">
+            <img src="./assets/images/living.jpg" alt="Living room painting">
+            <div class="room-category-content">
+              <h5>Living Rooms</h5>
+              <span><i class="fa-solid fa-arrow-right"></i> View work</span>
+            </div>
+          </div>
+
+          <div class="room-category reveal reveal-delay-2">
+            <img src="./assets/images/kitchen.jpg" alt="Kitchen painting">
+            <div class="room-category-content">
+              <h5>Kitchens</h5>
+              <span><i class="fa-solid fa-arrow-right"></i> View work</span>
+            </div>
+          </div>
+
+          <div class="room-category reveal reveal-delay-3">
+            <img src="./assets/images/bathroom.jpg" alt="Bathroom painting">
+            <div class="room-category-content">
+              <h5>Bathrooms</h5>
+              <span><i class="fa-solid fa-arrow-right"></i> View work</span>
+            </div>
+          </div>
+
+          <div class="room-category reveal">
+            <img src="./assets/images/dining.jpg" alt="Dining room">
+            <div class="room-category-content">
+              <h5>Dining Areas</h5>
+              <span><i class="fa-solid fa-arrow-right"></i> View work</span>
+            </div>
+          </div>
+
+          <div class="room-category reveal reveal-delay-1">
+            <img src="./assets/images/office.jpg" alt="Office space">
+            <div class="room-category-content">
+              <h5>Offices</h5>
+              <span><i class="fa-solid fa-arrow-right"></i> View work</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>Gurukrupa Paint Company has been offering professional painting services for over 10 years in the Mumbai,
-                Thane, and Maharashtra regions. Our goal is to bring beauty and life to your property with unmatched
-                attention to detail and quality craftsmanship.</p>
-            <a href="./about/about.html">Learn More</a>
+    <!-- All Services -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Complete Painting Solutions</span>
+          <h2 class="section-title">Beyond Interior, We Do It All</h2>
+          <p class="section-subtitle">
+            While interior painting is our specialty, we offer a complete range of services
+            for homes, offices and commercial spaces.
+          </p>
         </div>
+
+        <div class="services-grid">
+          <a href="./services/interior/interior.html" class="service-card featured reveal">
+            <div class="service-image">
+              <span class="service-icon-float"><i class="fa-solid fa-paint-roller"></i></span>
+              <img src="./assets/images/hero-1.jpg" alt="Interior Painting Service">
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Interior Painting</h3>
+              <p class="service-description">
+                Our commercial and house painters perform striking work for every interior project —
+                bedrooms, kitchens, living rooms, ceilings, and more.
+              </p>
+              <span class="service-link">Explore Service <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </a>
+
+          <a href="./services/exterior/exterior.html" class="service-card reveal reveal-delay-1">
+            <div class="service-image">
+              <span class="service-icon-float"><i class="fa-solid fa-fill-drip"></i></span>
+              <img src="./assets/images/exterior-1.jpg" alt="Exterior Painting Service">
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Exterior Painting</h3>
+              <p class="service-description">
+                Wide-ranging exterior painting services that enhance the visual appeal
+                of your residence or business — built to weather the elements.
+              </p>
+              <span class="service-link">Explore Service <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </a>
+
+          <a href="./services/house/house.html" class="service-card reveal reveal-delay-2">
+            <div class="service-image">
+              <span class="service-icon-float"><i class="fa-solid fa-house"></i></span>
+              <img src="./assets/images/exterior-2.jpg" alt="House Painting Service">
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">House Painting</h3>
+              <p class="service-description">
+                An extensive range of professional house painting services — complete
+                transformations from foundation to rooftop.
+              </p>
+              <span class="service-link">Explore Service <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </a>
+        </div>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d120562.31417576144!2d72.91905858389951!3d19.213873535905098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sIndia%20022%2C%20Mumbai%2C%20Thane%2C%20Mumbai%2C%20India!5e0!3m2!1sen!2sin!4v1734438585362!5m2!1sen!2sin"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
-            <form action="https://formspree.io/f/xrbgwlew" method="POST">
-                <input type="text" id="name" placeholder="Your Name" name="name" required>
-                <input type="email" id="email" placeholder="Your Email" name="email" required>
-                <textarea id="message" placeholder="Your Message" name="message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
+    <!-- Process -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Our Process</span>
+          <h2 class="section-title">Simple, Stress-Free, Professional</h2>
+          <p class="section-subtitle">
+            From the first call to the final walkthrough, we keep you informed and your home
+            protected every step of the way.
+          </p>
         </div>
+
+        <div class="process-grid">
+          <div class="process-step reveal">
+            <div class="process-number">1</div>
+            <h3 class="process-title">Free Consultation</h3>
+            <p class="process-description">
+              Call us or fill out the form. We visit your space, understand your vision and
+              provide a detailed, no-obligation estimate.
+            </p>
+          </div>
+
+          <div class="process-step reveal reveal-delay-1">
+            <div class="process-number">2</div>
+            <h3 class="process-title">Color & Material Selection</h3>
+            <p class="process-description">
+              We help you choose the perfect colors and finishes — and only use premium
+              paints built to last.
+            </p>
+          </div>
+
+          <div class="process-step reveal reveal-delay-2">
+            <div class="process-number">3</div>
+            <h3 class="process-title">Meticulous Preparation</h3>
+            <p class="process-description">
+              Furniture is protected, surfaces are cleaned, scraped and primed. Prep work is
+              the secret to a flawless, long-lasting finish.
+            </p>
+          </div>
+
+          <div class="process-step reveal reveal-delay-3">
+            <div class="process-number">4</div>
+            <h3 class="process-title">Painting & Final Walkthrough</h3>
+            <p class="process-description">
+              Our skilled painters deliver crisp, even coats. We do a final walkthrough with
+              you to ensure 100% satisfaction.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
-
-
-
-    <footer>
-        <div class="container">
-            <div class="contact-info">
-                <p><strong>Contact Us:</strong></p>
-                <p>Phone: <a href="tel:+91 9969441237">+91 9969441237</a></p>
-                <p>Phone: <a href="tel:+91 9594809030">+91 9594809030</a></p>
-                <p>Address: <span>Mumbai, Thane, Maharashtra, India</span></p>
-            </div>
-            <div class="social-icons">
-                <a href="https://www.facebook.com" target="_blank" class="social-icon"><i
-                        class="fab fa-facebook-f"></i></a>
-                <a href="https://wa.me/9594809030" target="_blank" class="social-icon"><i
-                        class="fab fa-whatsapp"></i></a>
-                <a href="https://www.instagram.com" target="_blank" class="social-icon"><i
-                        class="fab fa-instagram"></i></a>
-            </div>
-            <p>&copy; 2024 Gurukrupa Paint Company. All rights reserved. Serving Mumbai, Thane, and Maharashtra.</p>
+    <!-- Testimonials -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Testimonials</span>
+          <h2 class="section-title">Loved by Homeowners Across Mumbai</h2>
+          <p class="section-subtitle">
+            Trusted by thousands of homeowners and businesses across Mumbai, Thane and Maharashtra.
+          </p>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
+        <div class="testimonials-grid">
+          <div class="testimonial-card reveal">
+            <div class="testimonial-quote">"</div>
+            <div class="testimonial-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              Gurukrupa painted our entire 3BHK apartment. The team was punctual, polite, and the
+              finish is just beautiful. Highly recommended!
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">PS</div>
+              <div class="testimonial-info">
+                <h5>Priya Sharma</h5>
+                <span>Homeowner · Thane</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal reveal-delay-1">
+            <div class="testimonial-quote">"</div>
+            <div class="testimonial-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              Owner-supervised work and very competitive pricing. They finished our office
+              exterior a day ahead of schedule. Will use again.
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">RM</div>
+              <div class="testimonial-info">
+                <h5>Rajesh Mehta</h5>
+                <span>Business Owner · Mumbai</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal reveal-delay-2">
+            <div class="testimonial-quote">"</div>
+            <div class="testimonial-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              Best painting experience we've had. The crew was respectful, the prep work was
+              meticulous, and the final result looks premium.
+            </p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">AD</div>
+              <div class="testimonial-info">
+                <h5>Anita Deshmukh</h5>
+                <span>Homeowner · Navi Mumbai</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <div class="cta-text">
+            <h2>Ready to transform your space?</h2>
+            <p>Schedule your free, no-obligation estimate today. We'll visit, plan, and quote — at no cost.</p>
+          </div>
+          <div class="cta-actions">
+            <a href="tel:+919594809030" class="btn btn-primary btn-lg">
+              <i class="fa-solid fa-phone"></i> Call +91 9594809030
+            </a>
+            <a href="./contact/contact.html" class="btn btn-ghost btn-lg">
+              Request Online <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="./index.html" class="nav-logo">
+            <span class="nav-logo-icon"><i class="fa-solid fa-paint-roller"></i></span>
+            Gurukrupa
+          </a>
+          <p>
+            Mumbai's trusted interior painting contractor since 1992.
+            Quality craftsmanship, premium paints, and competitive pricing — guaranteed.
+          </p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://wa.me/919594809030" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="./index.html"><i class="fa-solid fa-chevron-right" style="font-size:10px"></i> Home</a></li>
+            <li><a href="./about/about.html"><i class="fa-solid fa-chevron-right" style="font-size:10px"></i> About Us</a></li>
+            <li><a href="./services/service.html"><i class="fa-solid fa-chevron-right" style="font-size:10px"></i> Services</a></li>
+            <li><a href="./services/interior/interior.html"><i class="fa-solid fa-chevron-right" style="font-size:10px"></i> Interior</a></li>
+            <li><a href="./gallery/gallery.html"><i class="fa-solid fa-chevron-right" style="font-size:10px"></i> Gallery</a></li>
+            <li><a href="./contact/contact.html"><i class="fa-solid fa-chevron-right" style="font-size:10px"></i> Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Our Services</h4>
+          <ul class="footer-links">
+            <li><a href="./services/interior/interior.html"><i class="fa-solid fa-chevron-right" style="font-size:10px"></i> Interior Painting</a></li>
+            <li><a href="./services/exterior/exterior.html"><i class="fa-solid fa-chevron-right" style="font-size:10px"></i> Exterior Painting</a></li>
+            <li><a href="./services/house/house.html"><i class="fa-solid fa-chevron-right" style="font-size:10px"></i> House Painting</a></li>
+            <li><a href="./services/service.html"><i class="fa-solid fa-chevron-right" style="font-size:10px"></i> Commercial Painting</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Get In Touch</h4>
+          <div class="footer-contact">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Mumbai, Thane, Maharashtra, India</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+919969441237">+91 9969441237</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+919594809030">+91 9594809030</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-brands fa-whatsapp"></i>
+              <a href="https://wa.me/919594809030" target="_blank">WhatsApp Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; <span data-year>2024</span> Gurukrupa Paint Company. All rights reserved. Serving Mumbai, Thane &amp; Maharashtra.
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919594809030" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

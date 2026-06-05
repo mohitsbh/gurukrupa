@@ -2,156 +2,366 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gurukrupa Paint</title>   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="./gallery.css"> <!-- Linking to the external CSS file -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse our portfolio of completed painting projects across Mumbai, Thane and Maharashtra.">
+  <title>Gallery - Gurukrupa Paint</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- Navbar and Home (Combined into one container) -->
-    <div id="nav-home">
-        <!-- Navigation Bar -->
-        <nav>
-            <div class="container">
-                <a href="../index.html" class="logo">Gurukrupa</a>
-
-                <!-- Hamburger Icon for mobile -->
-                <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div>
-
-                <!-- Navigation Links -->
-                <ul id="nav-links">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../services/service.html">Services</a></li>
-                    <li><a href="../gallery/gallery.html">Gallery</a></li>
-                    <li><a href="../about/about.html">About Us</a></li>
-                    <li><a href="../contact/contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-
-        <!-- Home Section (Hero Content) -->
-        <section id="home">
-            <div class="hero-content">
-                <h1>Gallery</h1>
-            </div>
-        </section>
+  <!-- Navbar -->
+  <nav class="navbar scrolled">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <span class="nav-logo-icon"><i class="fa-solid fa-paint-roller"></i></span>
+        Gurukrupa
+      </a>
+      <ul class="nav-menu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../services/service.html" class="nav-link">Services</a></li>
+        <li><a href="../gallery/gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="../about/about.html" class="nav-link">About</a></li>
+        <li><a href="../contact/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="tel:+919594809030" class="nav-cta">
+        <i class="fa-solid fa-phone"></i> +91 9594809030
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </nav>
 
+  <div class="mobile-menu-overlay"></div>
+  <div class="mobile-menu">
+    <ul class="mobile-menu-list">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../services/service.html">Services</a></li>
+      <li><a href="../gallery/gallery.html">Gallery</a></li>
+      <li><a href="../about/about.html">About</a></li>
+      <li><a href="../contact/contact.html">Contact</a></li>
+    </ul>
+    <div class="mobile-menu-cta">
+      <a href="tel:+919594809030" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call Now</a>
+      <a href="https://wa.me/919594809030" class="btn btn-secondary" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+    </div>
+  </div>
 
-    <!-- Gallery Section -->
-    <section id="gallery">
-        <div class="container">
-            <h2>Image Gallery</h2>
-            <div class="gallery-grid">
-                <!-- Images -->
-                <div class="gallery-item">
-                    <img src="../assets/wb1.jpg" alt="Project 1" onclick="openImageFullscreen(this)">
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/wb2.jpg" alt="Project 2" onclick="openImageFullscreen(this)">
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/wb3.jpg" alt="Project 1" onclick="openImageFullscreen(this)">
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/wb4.jpg" alt="Project 2" onclick="openImageFullscreen(this)">
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/wb5.jpg" alt="Project 1" onclick="openImageFullscreen(this)">
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/wb6.jpg" alt="Project 2" onclick="openImageFullscreen(this)">
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/wb7.jpg" alt="Project 1" onclick="openImageFullscreen(this)">
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/wb8.jpg" alt="Project 2" onclick="openImageFullscreen(this)">
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/wb9.jpg" alt="Project 1" onclick="openImageFullscreen(this)">
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/wb10.jpg" alt="Project 2" onclick="openImageFullscreen(this)">
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/wb11.jpg" alt="Project 1" onclick="openImageFullscreen(this)">
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/wb12.jpg" alt="Project 2" onclick="openImageFullscreen(this)">
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/wb13.jpg" alt="Project 2" onclick="openImageFullscreen(this)">
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/wb14.jpg" alt="Project 1" onclick="openImageFullscreen(this)">
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/wb15.jpg" alt="Project 2" onclick="openImageFullscreen(this)">
-                </div>
-                <div class="gallery-item">
-                    <img src="../assets/wb16.jpg" alt="Project 2" onclick="openImageFullscreen(this)">
-                </div>
-            </div>
+  <main>
+    <!-- Page Header -->
+    <section class="page-header gallery-header">
+      <div class="container">
+        <div class="page-header-content">
+          <span class="page-eyebrow">Our Portfolio</span>
+          <h1 class="page-title">A Glimpse of Our Work</h1>
+          <p class="page-subtitle">
+            Browse through some of our recent painting projects across Mumbai, Thane and
+            Maharashtra. Click any image to view in fullscreen.
+          </p>
+          <div class="breadcrumb">
+            <a href="../index.html">Home</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <span>Gallery</span>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Fullscreen Overlay -->
-    <div id="fullscreen-overlay" onclick="closeImageFullscreen()">
-        <img id="fullscreen-img" src="" alt="Fullscreen View">
+    <!-- Gallery -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Projects</span>
+          <h2 class="section-title">Recent Work</h2>
+          <p class="section-subtitle">
+            Every project is a story. Here are some of the homes and businesses
+            we've had the privilege to transform.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item reveal">
+            <img src="../assets/images/hero-1.jpg" alt="Living Room Makeover" data-lightbox="../assets/images/hero-1.jpg">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h4>Living Room Makeover</h4>
+                <span><i class="fa-solid fa-expand"></i> View Project</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal">
+            <img src="../assets/images/hero-2.jpg" alt="Modern Bedroom" data-lightbox="../assets/images/hero-2.jpg">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h4>Modern Bedroom</h4>
+                <span><i class="fa-solid fa-expand"></i> View Project</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal">
+            <img src="../assets/images/hero-3.jpg" alt="Kitchen Refresh" data-lightbox="../assets/images/hero-3.jpg">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h4>Kitchen Refresh</h4>
+                <span><i class="fa-solid fa-expand"></i> View Project</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal">
+            <img src="../assets/images/interior-1.jpg" alt="Modern Interior" data-lightbox="../assets/images/interior-1.jpg">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h4>Modern Interior</h4>
+                <span><i class="fa-solid fa-expand"></i> View Project</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal">
+            <img src="../assets/images/exterior-1.jpg" alt="Exterior Facade" data-lightbox="../assets/images/exterior-1.jpg">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h4>Exterior Facade</h4>
+                <span><i class="fa-solid fa-expand"></i> View Project</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal">
+            <img src="../assets/images/interior-2.jpg" alt="Living Room" data-lightbox="../assets/images/interior-2.jpg">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h4>Living Room Design</h4>
+                <span><i class="fa-solid fa-expand"></i> View Project</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal">
+            <img src="../assets/images/exterior-2.jpg" alt="House Exterior" data-lightbox="../assets/images/exterior-2.jpg">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h4>House Exterior</h4>
+                <span><i class="fa-solid fa-expand"></i> View Project</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal">
+            <img src="../assets/images/feature.jpg" alt="Accent Wall" data-lightbox="../assets/images/feature.jpg">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h4>Accent Wall</h4>
+                <span><i class="fa-solid fa-expand"></i> View Project</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal">
+            <img src="../assets/images/hallway.jpg" alt="Hallway" data-lightbox="../assets/images/hallway.jpg">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h4>Elegant Hallway</h4>
+                <span><i class="fa-solid fa-expand"></i> View Project</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal">
+            <img src="../assets/images/living.jpg" alt="Living Space" data-lightbox="../assets/images/living.jpg">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h4>Living Space</h4>
+                <span><i class="fa-solid fa-expand"></i> View Project</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal">
+            <img src="../assets/images/office.jpg" alt="Office Space" data-lightbox="../assets/images/office.jpg">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h4>Office Space</h4>
+                <span><i class="fa-solid fa-expand"></i> View Project</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal">
+            <img src="../assets/images/dining.jpg" alt="Dining Room" data-lightbox="../assets/images/dining.jpg">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h4>Dining Room</h4>
+                <span><i class="fa-solid fa-expand"></i> View Project</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal">
+            <img src="../assets/images/bedroom.jpg" alt="Master Bedroom" data-lightbox="../assets/images/bedroom.jpg">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h4>Master Bedroom</h4>
+                <span><i class="fa-solid fa-expand"></i> View Project</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal">
+            <img src="../assets/images/wall-texture.jpg" alt="Wall Texture" data-lightbox="../assets/images/wall-texture.jpg">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h4>Wall Texture</h4>
+                <span><i class="fa-solid fa-expand"></i> View Project</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal">
+            <img src="../assets/images/painter-1.jpg" alt="Painter at Work" data-lightbox="../assets/images/painter-1.jpg">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h4>Painter at Work</h4>
+                <span><i class="fa-solid fa-expand"></i> View Project</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal">
+            <img src="../assets/images/color-palette.jpg" alt="Color Palette" data-lightbox="../assets/images/color-palette.jpg">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h4>Color Palette</h4>
+                <span><i class="fa-solid fa-expand"></i> View Project</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal">
+            <img src="../assets/images/bathroom.jpg" alt="Bathroom" data-lightbox="../assets/images/bathroom.jpg">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h4>Bathroom</h4>
+                <span><i class="fa-solid fa-expand"></i> View Project</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal">
+            <img src="../assets/images/kitchen.jpg" alt="Kitchen Cabinets" data-lightbox="../assets/images/kitchen.jpg">
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <h4>Kitchen Cabinets</h4>
+                <span><i class="fa-solid fa-arrow-right"></i> View Project</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" role="dialog" aria-modal="true">
+      <button class="lightbox-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      <img src="" alt="Fullscreen view">
     </div>
 
-    <!-- JavaScript -->
-    <script>
-        // Open image in fullscreen
-        function openImageFullscreen(imgElement) {
-            const fullscreenOverlay = document.getElementById("fullscreen-overlay");
-            const fullscreenImg = document.getElementById("fullscreen-img");
-
-            // Set fullscreen image src
-            fullscreenImg.src = imgElement.src;
-
-            // Display overlay
-            fullscreenOverlay.style.display = "flex";
-        }
-
-        // Close fullscreen view
-        function closeImageFullscreen() {
-            const fullscreenOverlay = document.getElementById("fullscreen-overlay");
-            fullscreenOverlay.style.display = "none";
-        }
-    </script>
-
-
-    <footer>
-        <div class="container">
-            <div class="contact-info">
-                <p><strong>Contact Us:</strong></p>
-                <p>Phone: <a href="tel:+91 9969441237">+91 9969441237</a></p>
-                <p>Phone: <a href="tel:+91 9594809030">+91 9594809030</a></p>
-                <p>Address: <span>Mumbai, Thane, Maharashtra, India</span></p>
-            </div>
-            <div class="social-icons">
-                <a href="https://www.facebook.com" target="_blank" class="social-icon"><i
-                        class="fab fa-facebook-f"></i></a>
-                <a href="https://wa.me/9594809030" target="_blank" class="social-icon"><i
-                        class="fab fa-whatsapp"></i></a>
-                <a href="https://www.instagram.com" target="_blank" class="social-icon"><i
-                        class="fab fa-instagram"></i></a>
-            </div>
-            <p>&copy; 2024 Gurukrupa Paint Company. All rights reserved. Serving Mumbai, Thane, and Maharashtra.</p>
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <div class="cta-text">
+            <h2>Love what you see?</h2>
+            <p>Let us create something equally stunning for your home or business. Get a free estimate today.</p>
+          </div>
+          <div class="cta-actions">
+            <a href="tel:+919594809030" class="btn btn-primary btn-lg">
+              <i class="fa-solid fa-phone"></i> Call +91 9594809030
+            </a>
+            <a href="../contact/contact.html" class="btn btn-ghost btn-lg">
+              Request Quote <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
-    </footer>
-    <!-- <script src="./gallery.js"></script> -->
-    <script src="../hero/script.js"></script> <!-- Linking to the external JS file -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="nav-logo">
+            <span class="nav-logo-icon"><i class="fa-solid fa-paint-roller"></i></span>
+            Gurukrupa
+          </a>
+          <p>Trusted painting contractor serving Mumbai, Thane and Maharashtra since 1992.
+            Quality craftsmanship, premium paints, and competitive pricing — guaranteed.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://wa.me/919594809030" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html"><i class="fa-solid fa-chevron-right" style="font-size:10px"></i> Home</a></li>
+            <li><a href="../about/about.html"><i class="fa-solid fa-chevron-right" style="font-size:10px"></i> About Us</a></li>
+            <li><a href="../services/service.html"><i class="fa-solid fa-chevron-right" style="font-size:10px"></i> Services</a></li>
+            <li><a href="../gallery/gallery.html"><i class="fa-solid fa-chevron-right" style="font-size:10px"></i> Gallery</a></li>
+            <li><a href="../contact/contact.html"><i class="fa-solid fa-chevron-right" style="font-size:10px"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Our Services</h4>
+          <ul class="footer-links">
+            <li><a href="../services/interior/interior.html"><i class="fa-solid fa-chevron-right" style="font-size:10px"></i> Interior Painting</a></li>
+            <li><a href="../services/exterior/exterior.html"><i class="fa-solid fa-chevron-right" style="font-size:10px"></i> Exterior Painting</a></li>
+            <li><a href="../services/house/house.html"><i class="fa-solid fa-chevron-right" style="font-size:10px"></i> House Painting</a></li>
+            <li><a href="../services/service.html"><i class="fa-solid fa-chevron-right" style="font-size:10px"></i> Commercial Painting</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Get In Touch</h4>
+          <div class="footer-contact">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Mumbai, Thane, Maharashtra, India</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+919969441237">+91 9969441237</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+919594809030">+91 9594809030</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-brands fa-whatsapp"></i>
+              <a href="https://wa.me/919594809030" target="_blank">WhatsApp Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; <span data-year>2024</span> Gurukrupa Paint Company. All rights reserved. Serving Mumbai, Thane &amp; Maharashtra.
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919594809030" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script src="../assets/js/main.js"></script>
 </body>
 
 </html>

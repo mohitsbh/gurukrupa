@@ -2,89 +2,276 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="contact.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch with Gurukrupa Paint for a free painting estimate in Mumbai, Thane and Maharashtra.">
+  <title>Contact Us - Gurukrupa Paint</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
-
-    <div id="nav-home">
-        <!-- Navigation Bar -->
-        <nav>
-            <div class="container">
-                <a href="../index.html" class="logo">Gurukrupa</a>
-
-                <!-- Hamburger Icon for mobile -->
-                <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div>
-
-                <!-- Navigation Links -->
-                <ul id="nav-links">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../services/service.html">Services</a></li>
-                    <li><a href="../gallery/gallery.html">Gallery</a></li>
-                    <li><a href="../about/about.html">About Us</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-
-        <section id="home">
-            <div class="hero-content">
-                <h1>Contact Us</h1>
-
-            </div>
-        </section>
-
+  <!-- Navbar -->
+  <nav class="navbar scrolled">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <span class="nav-logo-icon"><i class="fa-solid fa-paint-roller"></i></span>
+        Gurukrupa
+      </a>
+      <ul class="nav-menu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../services/service.html" class="nav-link">Services</a></li>
+        <li><a href="../services/interior/interior.html" class="nav-link">Interior</a></li>
+        <li><a href="../gallery/gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="../about/about.html" class="nav-link">About</a></li>
+        <li><a href="../contact/contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="tel:+919594809030" class="nav-cta">
+        <i class="fa-solid fa-phone"></i> +91 9594809030
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </nav>
 
-    <!-- contact -->
-    <section id="contact">
-        <div class="container">
+  <div class="mobile-menu-overlay"></div>
+  <div class="mobile-menu">
+    <ul class="mobile-menu-list">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../services/service.html">Services</a></li>
+      <li><a href="../services/interior/interior.html">Interior</a></li>
+      <li><a href="../gallery/gallery.html">Gallery</a></li>
+      <li><a href="../about/about.html">About</a></li>
+      <li><a href="../contact/contact.html">Contact</a></li>
+    </ul>
+    <div class="mobile-menu-cta">
+      <a href="tel:+919594809030" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call Now</a>
+      <a href="https://wa.me/919594809030" class="btn btn-secondary" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+    </div>
+  </div>
 
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d120562.31417576144!2d72.91905858389951!3d19.213873535905098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sIndia%20022%2C%20Mumbai%2C%20Thane%2C%20Mumbai%2C%20India!5e0!3m2!1sen!2sin!4v1734438585362!5m2!1sen!2sin"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-            <form action="https://formspree.io/f/xrbgwlew" method="POST">
-                <input type="text" id="name" placeholder="Your Name" name="name" required>
-                <input type="email" id="email" placeholder="Your Email" name="email" required>
-                <textarea id="message" placeholder="Your Message" name="message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
+  <main>
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <div class="page-header-content">
+          <span class="page-eyebrow">Get In Touch</span>
+          <h1 class="page-title">Let's Plan Your Project</h1>
+          <p class="page-subtitle">
+            Tell us about your project and we'll get back to you within 24 hours with a
+            free, no-obligation estimate.
+          </p>
+          <div class="breadcrumb">
+            <a href="../index.html">Home</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <span>Contact</span>
+          </div>
         </div>
+      </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="contact-info">
-                <p><strong>Contact Us:</strong></p>
-                <p>Phone: <a href="tel:+91 9969441237">+91 9969441237</a></p>
-                <p>Phone: <a href="tel:+91 9594809030">+91 9594809030</a></p>
-                <p>Address: <span>Mumbai, Thane, Maharashtra, India</span></p>
+    <!-- Contact Section -->
+    <section class="section">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <h2 class="contact-info-title">Reach Out to Us</h2>
+            <p class="contact-info-text">
+              Whether you need a quote, want to discuss a project, or just have a question —
+              we're here to help. Choose the way that's most convenient for you.
+            </p>
+
+            <a href="tel:+919594809030" class="contact-item">
+              <div class="contact-item-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="contact-item-content">
+                <h5>Call Us</h5>
+                <p>+91 9594809030</p>
+              </div>
+            </a>
+
+            <a href="tel:+919969441237" class="contact-item">
+              <div class="contact-item-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="contact-item-content">
+                <h5>Alternate Number</h5>
+                <p>+91 9969441237</p>
+              </div>
+            </a>
+
+            <a href="https://wa.me/919594809030" target="_blank" class="contact-item">
+              <div class="contact-item-icon"><i class="fa-brands fa-whatsapp"></i></div>
+              <div class="contact-item-content">
+                <h5>WhatsApp</h5>
+                <p>Chat with us instantly</p>
+              </div>
+            </a>
+
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="contact-item-content">
+                <h5>Service Area</h5>
+                <p>Mumbai, Thane, Maharashtra</p>
+              </div>
             </div>
-            <div class="social-icons">
-                <a href="https://www.facebook.com" target="_blank" class="social-icon"><i
-                        class="fab fa-facebook-f"></i></a>
-                <a href="https://wa.me/9594809030" target="_blank" class="social-icon"><i
-                        class="fab fa-whatsapp"></i></a>
-                <a href="https://www.instagram.com" target="_blank" class="social-icon"><i
-                        class="fab fa-instagram"></i></a>
+
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="fa-regular fa-clock"></i></div>
+              <div class="contact-item-content">
+                <h5>Working Hours</h5>
+                <p>Mon - Sat: 9:00 AM - 7:00 PM</p>
+              </div>
             </div>
-            <p>&copy; 2024 Gurukrupa Paint Company. All rights reserved. Serving Mumbai, Thane, and Maharashtra.</p>
+          </div>
+
+          <form id="contact-form" class="contact-form reveal reveal-delay-1" action="https://formspree.io/f/xrbgwlew" method="POST">
+            <h3 style="font-size: 22px; margin-bottom: 8px;">Request a Free Quote</h3>
+            <p style="color: var(--color-text-muted); font-size: 14px; margin-bottom: 24px;">
+              Fill in the form and we'll get back to you within 24 hours.
+            </p>
+
+            <div class="form-row">
+              <div class="form-group" style="margin-bottom: 0;">
+                <label class="form-label" for="name">Full Name</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Your name" required>
+              </div>
+              <div class="form-group" style="margin-bottom: 0;">
+                <label class="form-label" for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="+91" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">Email Address</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="your@email.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="service">Service Required</label>
+              <select id="service" name="service" class="form-control" required>
+                <option value="">Select a service</option>
+                <option value="interior">Interior Painting</option>
+                <option value="exterior">Exterior Painting</option>
+                <option value="house">Complete House Painting</option>
+                <option value="commercial">Commercial Painting</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Project Details</label>
+              <textarea id="message" name="message" class="form-control" placeholder="Tell us about your project — size, location, timeline..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+
+            <div class="form-status"></div>
+          </form>
         </div>
-    </footer>
+
+        <div class="map-container reveal">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d120562.31417576144!2d72.91905858389951!3d19.213873535905098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sIndia%20022%2C%20Mumbai%2C%20Thane%2C%20Mumbai%2C%20India!5e0!3m2!1sen!2sin!4v1734438585362!5m2!1sen!2sin"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Gurukrupa Paint service area - Mumbai, Thane, Maharashtra">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <div class="cta-text">
+            <h2>Prefer to talk right now?</h2>
+            <p>Call us directly. We're happy to answer any questions and provide instant estimates over the phone.</p>
+          </div>
+          <div class="cta-actions">
+            <a href="tel:+919594809030" class="btn btn-primary btn-lg">
+              <i class="fa-solid fa-phone"></i> Call +91 9594809030
+            </a>
+            <a href="https://wa.me/919594809030" class="btn btn-ghost btn-lg" target="_blank">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="nav-logo">
+            <span class="nav-logo-icon"><i class="fa-solid fa-paint-roller"></i></span>
+            Gurukrupa
+          </a>
+          <p>Mumbai's trusted interior painting contractor since 1992.
+            Quality craftsmanship, premium paints, and competitive pricing — guaranteed.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://wa.me/919594809030" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html"><i class="fa-solid fa-chevron-right" style="font-size:10px"></i> Home</a></li>
+            <li><a href="../about/about.html"><i class="fa-solid fa-chevron-right" style="font-size:10px"></i> About Us</a></li>
+            <li><a href="../services/service.html"><i class="fa-solid fa-chevron-right" style="font-size:10px"></i> Services</a></li>
+            <li><a href="../services/interior/interior.html"><i class="fa-solid fa-chevron-right" style="font-size:10px"></i> Interior</a></li>
+            <li><a href="../gallery/gallery.html"><i class="fa-solid fa-chevron-right" style="font-size:10px"></i> Gallery</a></li>
+            <li><a href="../contact/contact.html"><i class="fa-solid fa-chevron-right" style="font-size:10px"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Our Services</h4>
+          <ul class="footer-links">
+            <li><a href="../services/interior/interior.html"><i class="fa-solid fa-chevron-right" style="font-size:10px"></i> Interior Painting</a></li>
+            <li><a href="../services/exterior/exterior.html"><i class="fa-solid fa-chevron-right" style="font-size:10px"></i> Exterior Painting</a></li>
+            <li><a href="../services/house/house.html"><i class="fa-solid fa-chevron-right" style="font-size:10px"></i> House Painting</a></li>
+            <li><a href="../services/service.html"><i class="fa-solid fa-chevron-right" style="font-size:10px"></i> Commercial Painting</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Get In Touch</h4>
+          <div class="footer-contact">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Mumbai, Thane, Maharashtra, India</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+919969441237">+91 9969441237</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+919594809030">+91 9594809030</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-brands fa-whatsapp"></i>
+              <a href="https://wa.me/919594809030" target="_blank">WhatsApp Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; <span data-year>2024</span> Gurukrupa Paint Company. All rights reserved. Serving Mumbai, Thane &amp; Maharashtra.
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/919594809030" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script src="../assets/js/main.js"></script>
 </body>
-<script src="../script.js"></script>
 
 </html>
