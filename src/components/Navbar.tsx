@@ -88,20 +88,20 @@ export function Navbar() {
             <Phone size={14} />
             +91 9594809030
           </a>
-
-          <button
-            className={`lg:hidden w-11 h-11 grid place-items-center relative z-[60] rounded-full transition-all duration-300 ${
-              scrolled
-                ? "bg-primary/5 text-primary hover:bg-primary/10"
-                : "bg-white/20 text-white backdrop-blur-md hover:bg-white/30"
-            }`}
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Toggle menu"
-          >
-            {mobileOpen ? <X size={22} /> : <Menu size={22} />}
-          </button>
         </div>
       </nav>
+
+      <button
+        className={`lg:hidden fixed top-[22px] right-[34px] w-11 h-11 grid place-items-center z-[60] rounded-full transition-all duration-300 ${
+          mobileOpen || scrolled
+            ? "bg-primary/5 text-primary hover:bg-primary/10"
+            : "bg-white/20 text-white backdrop-blur-md hover:bg-white/30"
+        }`}
+        onClick={() => setMobileOpen(!mobileOpen)}
+        aria-label={mobileOpen ? "Close menu" : "Open menu"}
+      >
+        {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+      </button>
 
       <AnimatePresence>
         {mobileOpen && (
