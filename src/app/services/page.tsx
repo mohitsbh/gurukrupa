@@ -106,7 +106,7 @@ export default function ServicesPage() {
           </FadeIn>
           <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8">
             {services.map((svc, i) => (
-              <ServiceCard key={i} svc={svc} i={i} />
+              <ServiceCard key={i} svc={svc} />
             ))}
           </div>
         </div>

@@ -35,21 +35,6 @@ const rooms = [
   { name: "Home Offices", image: "/images/office.jpg" },
 ];
 
-import { ComponentType } from "react";
-
-function GlassCard({ icon: Icon, title, desc }: { icon: ComponentType<{ size?: number }>; title: string; desc: string }) {
-  return (
-    <div className="group relative bg-white/80 backdrop-blur-xl border border-white/50 rounded-[28px] p-10 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(15,30,61,0.1)] hover:border-accent/20 overflow-hidden">
-      <div className="absolute top-0 left-0 w-1 h-0 bg-gradient-to-b from-accent to-gold transition-[height] duration-500 group-hover:h-full rounded-r" />
-      <div className="w-[60px] h-[60px] grid place-items-center bg-gradient-to-br from-accent/10 to-gold/10 text-accent rounded-2xl mb-5 transition-all duration-500 group-hover:scale-110 group-hover:from-accent group-hover:to-gold group-hover:text-white group-hover:shadow-[0_8px_20px_rgba(232,93,4,0.3)]">
-        <Icon size={26} />
-      </div>
-      <h3 className="text-xl font-bold mb-3 tracking-tight">{title}</h3>
-      <p className="text-text-muted text-[15px] leading-relaxed">{desc}</p>
-    </div>
-  );
-}
-
 function RoomCard({ room }: { room: typeof rooms[0] }) {
   return (
     <Link
@@ -90,9 +75,16 @@ export default function InteriorPage() {
             />
           </FadeIn>
           <div className="grid grid-cols-[repeat(auto-fit,minmax(270px,1fr))] gap-6">
-            {features.map((f, i) => (
+            {features.map(({ icon: Icon, title, desc }, i) => (
               <FadeIn key={i} delay={i * 0.1}>
-                <GlassCard icon={f.icon} title={f.title} desc={f.desc} />
+                <div className="group relative bg-white/80 backdrop-blur-xl border border-white/50 rounded-[28px] p-10 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(15,30,61,0.1)] hover:border-accent/20 overflow-hidden">
+                  <div className="absolute top-0 left-0 w-1 h-0 bg-gradient-to-b from-accent to-gold transition-[height] duration-500 group-hover:h-full rounded-r" />
+                  <div className="w-[60px] h-[60px] grid place-items-center bg-gradient-to-br from-accent/10 to-gold/10 text-accent rounded-2xl mb-5 transition-all duration-500 group-hover:scale-110 group-hover:from-accent group-hover:to-gold group-hover:text-white group-hover:shadow-[0_8px_20px_rgba(232,93,4,0.3)]">
+                    <Icon size={26} />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 tracking-tight">{title}</h3>
+                  <p className="text-text-muted text-[15px] leading-relaxed">{desc}</p>
+                </div>
               </FadeIn>
             ))}
           </div>
@@ -112,7 +104,7 @@ export default function InteriorPage() {
           <div className="grid grid-cols-3 md:grid-cols-6 gap-3 md:gap-4">
             {rooms.map((room, i) => (
               <FadeIn key={i} delay={i * 0.07}>
-                <RoomCard room={room} i={i} />
+                <RoomCard room={room} />
               </FadeIn>
             ))}
           </div>
