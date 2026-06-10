@@ -1,0 +1,1032 @@
+/* Reset some basic styling */
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Eagle+Lake&family=Playwrite+DE+VA+Guides&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+/* Navigation Styles */
+#nav-home {
+  position: relative;
+  background: url("../../assets/bg1.jpg") no-repeat center center/cover;
+  height: 100vh;
+}
+
+/* Overlay with light black background */
+#nav-home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Light black background overlay */
+  z-index: 0;
+}
+
+/* Navigation Bar */
+nav {
+  z-index: 2;
+  position: relative;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  z-index: 1;
+}
+
+nav .logo {
+  color: #e6f517;
+  font-size: 38px;
+  font-weight: 900;
+  text-decoration: none;
+  font-family: "Eagle Lake", serif;
+  font-weight: 400;
+  span {
+    font-size: 28px;
+  }
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none; /* Hidden on desktop */
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 3;
+}
+
+.hamburger .bar {
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Change hamburger appearance on open */
+.hamburger.open .bar:nth-child(1) {
+  transform: rotate(-45deg);
+  position: relative;
+  top: 8px;
+}
+
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+  transform: rotate(45deg);
+  position: relative;
+  top: -8px;
+}
+
+/* Navigation links */
+#nav-links {
+  display: flex; /* On larger screens, nav links will be displayed */
+  list-style: none;
+  flex-direction: row;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #d1ff04;
+}
+
+/* Mobile menu styles */
+@media (max-width: 768px) {
+  /* Show the hamburger icon on mobile */
+  .hamburger {
+    display: block;
+  }
+
+  #nav-links {
+    display: none; /* Initially hide on mobile */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 1);
+    padding-top: 80px;
+    height: 100vh;
+  }
+  nav .logo {
+    font-size: 25px;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin-bottom: 40px;
+  }
+
+  nav ul li a {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+  }
+
+  /* When the menu is active, show the navigation */
+  #nav-links.active {
+    display: flex;
+  }
+}
+/* Hero Section Styles */
+#home {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.Schedule {
+  color: #aac511;
+}
+
+.hero-btn {
+  background-color: #d3e01c;
+  color: #222;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.hero-btn:hover {
+  background-color: #ffa500;
+}
+
+.hero-btn:active {
+  background-color: #cc8500;
+}
+@media (max-width: 768px) {
+  /* Adjust font size of hero content */
+  .hero-content h1 {
+    font-size: 28px; /* Reduced font size for h1 */
+  }
+
+  .hero-content p {
+    font-size: 16px; /* Reduced font size for p */
+  }
+
+  .hero-btn {
+    font-size: 16px; /* Adjusted button font size */
+    padding: 10px 20px; /* Slightly reduced button padding */
+  }
+}
+/* Near header: Default styling for large screens */
+#near-header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns for larger screens */
+  padding: 30px;
+  gap: 20px;
+}
+
+.card-tem {
+  text-align: center;
+  background-color: #377eca23;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the headings inside .card-tem */
+.card-tem h5 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+/* Responsive adjustments for tablets */
+@media (max-width: 1024px) {
+  #near-header {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .card-tem h5 {
+    font-size: 22px; /* Adjust font size for headings */
+  }
+
+  .card-tem {
+    padding: 15px; /* Adjust padding */
+  }
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+  #near-header {
+    grid-template-columns: 1fr; /* One column for mobile */
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .card-tem {
+    padding: 10px; /* Smaller padding for mobile */
+  }
+
+  .card-tem h5 {
+    font-size: 18px; /* Smaller font size for headings */
+  }
+
+  .card-tem p {
+    font-size: 14px; /* Adjust text size */
+  }
+}
+
+/* about near start */
+#about-index {
+  padding: 30px;
+  text-align: center;
+  width: 30vw; /* 30% of the viewport width */
+  display: flex;
+  align-items: center;
+  margin: 30px auto;
+  border: 3px solid #377eca23;
+  border-radius: 10px;
+  justify-content: center; /* Added to center content in flexbox */
+
+  .content {
+    h5 {
+      color: rgba(21, 114, 236, 0.904);
+      font-size: 14px;
+    }
+
+    h3 {
+      font-size: 26px;
+      font-weight: 300;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      border: 1px solid rgba(21, 114, 236, 0.904);
+      color: rgba(21, 114, 236, 0.904);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    a:hover {
+      transform: scale(1.3);
+      background-color: rgba(14, 200, 233, 0.842);
+      border: none;
+      color: #f7f7f3;
+      box-shadow: 2px 30px 40px rgba(224, 224, 106, 0.411);
+    }
+  }
+}
+
+/* Media Query for responsive design */
+@media (max-width: 768px) {
+  #about-index {
+    width: 80vw; /* Takes up 80% of the viewport width on smaller devices */
+    padding: 20px;
+  }
+
+  #about-index .content {
+    padding: 0 15px; /* Adds padding around content on smaller screens */
+  }
+
+  #about-index .content h5 {
+    font-size: 12px; /* Adjusted font-size for smaller screens */
+  }
+
+  #about-index .content h3 {
+    font-size: 20px; /* Adjusted font-size */
+  }
+
+  #about-index .content p {
+    font-size: 14px; /* Smaller text for better readability */
+  }
+
+  #about-index .content a {
+    padding: 8px 18px; /* Smaller button padding */
+  }
+}
+
+/* Media Query for even smaller screens */
+@media (max-width: 480px) {
+  #about-index {
+    width: 90vw; /* Takes up 90% of the viewport width on very small devices */
+    padding: 15px;
+  }
+
+  #about-index .content h3 {
+    font-size: 18px; /* Further adjust font-size */
+  }
+
+  #about-index .content p {
+    font-size: 13px; /* Adjust paragraph font-size */
+  }
+
+  #about-index .content a {
+    padding: 6px 15px; /* Smaller button padding for small screens */
+  }
+}
+/* about index end */
+
+/* About Near start */
+#about-near {
+  width: 100%;
+  margin: 50px 0;
+}
+
+.top,
+.middle {
+  background-color: #377eca23;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Content section */
+.top .content,
+.middle .content {
+  h5 {
+    font-size: 20px;
+    color: #555454;
+  }
+  h3 {
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1.3;
+  }
+  width: 50%;
+  padding: 20px;
+}
+
+.top .image,
+.middle .image {
+  width: 50%;
+}
+
+.top .image img,
+.middle .image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Bottom section styling */
+.bottom {
+  padding: 20px 50px;
+  background-color: #377eca23;
+}
+
+.bottom h5 {
+  font-size: 19px;
+  color: #777;
+}
+
+.bottom h3 {
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.bottom a {
+  text-decoration: none;
+  border: 1px solid rgba(21, 114, 236, 0.904);
+  color: rgba(21, 114, 236, 0.904);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.bottom a:hover {
+  transform: scale(1.3);
+  background-color: rgba(14, 200, 233, 0.842);
+  border: none;
+  color: rgba(250, 251, 252, 0.904);
+  box-shadow: 2px 30px 40px rgba(224, 224, 106, 0.411);
+}
+
+/* Media Query for Tablets and Small Laptops (max-width: 768px) */
+@media (max-width: 768px) {
+  .top,
+  .middle {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .top .content,
+  .middle .content {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    img {
+      width: 100vw;
+    }
+  }
+
+  /* Adjust font sizes for smaller screens */
+  .top .content h5,
+  .middle .content h5 {
+    font-size: 18px;
+  }
+
+  .top .content h3,
+  .middle .content h3 {
+    font-size: 28px;
+  }
+
+  .bottom h5 {
+    font-size: 16px;
+  }
+
+  .bottom h3 {
+    font-size: 24px;
+  }
+
+  .bottom a {
+    padding: 8px 16px;
+  }
+
+  .bottom a:hover {
+    transform: scale(1.2);
+  }
+}
+
+/* Media Query for Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .top,
+  .middle {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .top .content,
+  .middle .content {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  /* Further adjust font sizes for very small screens */
+  .top .content h5,
+  .middle .content h5 {
+    font-size: 16px;
+  }
+
+  .top .content h3,
+  .middle .content h3 {
+    font-size: 22px;
+  }
+
+  .bottom h5 {
+    font-size: 14px;
+  }
+
+  .bottom h3 {
+    font-size: 20px;
+  }
+
+  .bottom a {
+    padding: 6px 14px;
+  }
+
+  .bottom a:hover {
+    transform: scale(1.1);
+  }
+}
+
+/* Services Section */
+#services {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+#services h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 36px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#services h4 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.service-boxes {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px; /* Space between the items */
+  flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.service-item {
+  text-align: center;
+  width: 30%;
+  min-width: 250px; /* Ensure a minimum width for smaller screens */
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.service-item:hover {
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.service-item i {
+  font-size: 40px;
+  color: #f07e1f; /* Orange color for the icons */
+  margin-bottom: 15px;
+}
+
+.service-item h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.service-item p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Media Queries for Mobile and Tablets */
+
+/* For smaller tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .service-boxes {
+    flex-direction: column;
+    align-items: center; /* Center align on small screens */
+    gap: 20px;
+  }
+
+  .service-item {
+    width: 80%; /* Ensure each item takes more width on smaller screens */
+    margin-bottom: 20px; /* Add spacing between service items */
+  }
+
+  #services h2 {
+    font-size: 28px; /* Slightly smaller font on tablets */
+  }
+
+  #services h4 {
+    font-size: 22px; /* Slightly smaller font for the subheading */
+  }
+
+  .service-item i {
+    font-size: 35px; /* Adjust icon size for tablets */
+  }
+
+  .service-item h3 {
+    font-size: 20px; /* Adjust heading font size */
+  }
+
+  .service-item p {
+    font-size: 14px; /* Adjust paragraph font size */
+  }
+}
+
+/* For very small screens, such as mobile phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .service-boxes {
+    flex-direction: column;
+    align-items: center; /* Center align on very small screens */
+    gap: 20px;
+  }
+
+  .service-item {
+    width: 90%; /* Ensure each item takes almost full width on small screens */
+    margin-bottom: 20px;
+  }
+
+  #services h2 {
+    font-size: 24px; /* Smaller heading for mobile devices */
+    margin-bottom: 30px; /* Reduce space */
+  }
+
+  #services h4 {
+    font-size: 18px; /* Reduce subheading font size for phones */
+  }
+
+  .service-item i {
+    font-size: 30px; /* Smaller icon size for mobile */
+  }
+
+  .service-item h3 {
+    font-size: 18px; /* Smaller heading text on small screens */
+  }
+
+  .service-item p {
+    font-size: 14px; /* Slightly smaller text for mobile screens */
+  }
+} /* Gallery Section */
+#gallery {
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+}
+
+#gallery a {
+  text-decoration: none;
+  border: 1px solid rgba(21, 114, 236, 0.904);
+  color: rgba(21, 114, 236, 0.904);
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: inline-block; /* ensures margin works around the button */
+  margin-top: 10px; /* Adds space between gallery images and the button */
+}
+
+#gallery a:hover {
+  transform: scale(1.3);
+  background-color: rgba(14, 200, 233, 0.842);
+  border: none;
+  color: rgba(250, 251, 252, 0.904);
+  box-shadow: 2px 30px 40px rgba(224, 224, 106, 0.411);
+}
+
+#gallery h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 36px;
+}
+
+/* Grid styles for the gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Add margin to gallery items */
+.gallery-item {
+  margin-bottom: 20px; /* Add space below each gallery image */
+}
+
+/* Responsive design for small screens */
+@media (max-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    padding: 0 10px; /* Add padding for smaller screens */
+  }
+
+  #gallery h2 {
+    font-size: 28px; /* Slightly smaller font size on smaller devices */
+  }
+
+  #gallery a {
+    padding: 8px 16px; /* Adjust padding for smaller buttons */
+  }
+}
+
+/* About Section */
+#about {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+#about a {
+  text-decoration: none;
+  border: 1px solid rgba(21, 114, 236, 0.904);
+  color: rgba(21, 114, 236, 0.904);
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: inline-block; /* ensures margin works around the button */
+  margin-top: 8px; /* Adds space between gallery images and the button */
+}
+
+#about a:hover {
+  transform: scale(1.3);
+  background-color: rgba(14, 200, 233, 0.842);
+  border: none;
+  color: rgba(250, 251, 252, 0.904);
+  box-shadow: 2px 30px 40px rgba(224, 224, 106, 0.411);
+}
+
+#about h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 18px; /* Ensures text size remains legible */
+  line-height: 1.6;
+  margin-bottom: 30px;
+  text-align: left; /* Keep text left-aligned on smaller screens for readability */
+  max-width: 800px; /* Limit text width for better readability */
+  margin-left: auto;
+  margin-right: auto; /* Center text block */
+}
+
+/* Responsive design for small screens */
+@media (max-width: 1024px) {
+  #about h2 {
+    font-size: 30px; /* Slightly smaller font size for tablets */
+  }
+
+  #about p {
+    font-size: 16px; /* Smaller text for better fitting on smaller screens */
+    max-width: 90%; /* Allow the paragraph to take up more space on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  #about h2 {
+    font-size: 28px; /* Smaller font size for mobile screens */
+  }
+
+  #about p {
+    font-size: 14px; /* Text further reduced on mobile */
+    line-height: 1.5;
+    max-width: 100%; /* Full width of the screen */
+  }
+
+  #about a {
+    padding: 8px 16px; /* Adjust button padding */
+    font-size: 14px; /* Make button text smaller */
+  }
+}
+
+@media (max-width: 480px) {
+  #about p {
+    font-size: 12px; /* Smallest font size for extra small screens */
+  }
+
+  #about a {
+    font-size: 12px; /* Make the link text smaller */
+  }
+}
+
+/* Contact Section */
+#contact {
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+}
+
+#contact h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#contact form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#contact .btn {
+  background-color: #f07e1f;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* Default styling */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+iframe {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+#contact-form {
+  display: grid;
+  gap: 15px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#contact .btn{
+  text-decoration: none;
+  border: 1px solid rgba(21, 114, 236, 0.904);
+  color: rgba(21, 114, 236, 0.904);
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: inline-block; /* ensures margin works around the button */
+  margin-top: 8px; /* Adds space between gallery images and the button */
+  background: transparent;
+}
+
+#contact .btn:hover {
+  transform: scale(1.3);
+  background-color: rgba(14, 200, 233, 0.842);
+  border: none;
+  color: rgba(250, 251, 252, 0.904);
+  box-shadow: 2px 30px 40px rgba(224, 224, 106, 0.411);
+}
+
+/* Make the layout responsive */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  iframe {
+    width: 100%;
+    height: 300px;
+  }
+
+  #contact-form {
+    grid-template-columns: 1fr; /* Stacking the form fields */
+    padding: 0 10px;
+  }
+
+  #contact-form input,
+  #contact-form textarea {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  /* For very small devices */
+  h2 {
+    font-size: 24px;
+  }
+
+  #contact-form input,
+  #contact-form textarea {
+    font-size: 12px;
+  }
+}
+/* footer */
+
+footer {
+  background-color: #004880; /* Match with your company's theme */
+  padding: 20px 0;
+  text-align: center;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer .contact-info {
+  margin-top: 20px;
+}
+
+footer .contact-info p {
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+footer .contact-info a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+footer .contact-info span {
+  font-style: italic;
+}
+
+footer .social-icons {
+  margin-top: 15px;
+}
+
+footer .social-icons a {
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0 10px;
+  font-size: 24px;
+}
+
+footer .social-icons a:hover {
+  color: #cde7ff; /* Lighter hover effect */
+}
+
+@media (max-width: 768px) {
+  footer .container p {
+    font-size: 14px;
+  }
+
+  footer .contact-info p {
+    font-size: 12px;
+  }
+
+  footer .social-icons a {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer .container p {
+    font-size: 12px;
+  }
+
+  footer .contact-info p {
+    font-size: 10px;
+  }
+
+  footer .social-icons a {
+    font-size: 18px;
+  }
+}

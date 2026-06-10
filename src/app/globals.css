@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #0f1e3d;
+  --color-primary-dark: #081530;
+  --color-primary-light: #1e3563;
+  --color-accent: #e85d04;
+  --color-accent-dark: #c44d00;
+  --color-accent-light: #ff7a2e;
+  --color-gold: #f4b942;
+  --color-cream: #fef3e2;
+  --color-bg: #fbfaf7;
+  --color-bg-alt: #f5f2ec;
+  --color-surface: #ffffff;
+  --color-text: #1a1f2e;
+  --color-text-muted: #5b6373;
+  --color-text-light: #8a91a0;
+  --color-border: #e8e4dc;
+  --color-border-light: #f0ede5;
+  --color-success: #16a34a;
+  --color-whatsapp: #25d366;
+  --font-heading: "Poppins", system-ui, -apple-system, sans-serif;
+  --font-body: "Poppins", system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: rgba(232, 93, 4, 0.2);
+  color: var(--color-primary);
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--color-bg-alt); }
+::-webkit-scrollbar-thumb { background: var(--color-primary-light); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-accent); }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(232, 93, 4, 0.2), 0 0 40px rgba(232, 93, 4, 0.1); }
+  50% { box-shadow: 0 0 30px rgba(232, 93, 4, 0.4), 0 0 60px rgba(232, 93, 4, 0.2); }
+}
+
+.animate-float { animation: float 3s ease-in-out infinite; }
+.animate-float-delayed { animation: float 3s ease-in-out 1.5s infinite; }
+.animate-glow { animation: glow-pulse 3s ease-in-out infinite; }
+.animate-shimmer { background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent); background-size: 200% 100%; animation: shimmer 2s infinite; }
