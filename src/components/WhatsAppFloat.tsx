@@ -4,14 +4,20 @@ import { MessageCircle } from "lucide-react";
 
 export function WhatsAppFloat() {
   return (
-    <a
-      href="https://wa.me/919594809030"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-[998] w-[60px] h-[60px] grid place-items-center bg-gradient-to-br from-[#25d366] to-[#128C7E] text-white rounded-full shadow-[0_8px_32px_rgba(37,211,102,0.4)] hover:shadow-[0_12px_48px_rgba(37,211,102,0.6)] transition-all duration-500 hover:scale-110 hover:rotate-6 active:scale-95 animate-float max-sm:w-[54px] max-sm:h-[54px] max-sm:bottom-4 max-sm:right-4 before:absolute before:inset-[-4px] before:rounded-full before:border-2 before:border-[#25d366]/30 before:animate-[pulse_2s_infinite]"
-      aria-label="Chat on WhatsApp"
-    >
-      <MessageCircle size={28} fill="white" />
-    </a>
+    <div className="fixed bottom-8 right-8 z-[100] group">
+      <div className="absolute -inset-4 bg-[#532900]/20 rounded-full animate-pulse" />
+      <a
+        href="https://wa.me/919594809030"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative flex items-center justify-center w-[60px] h-[60px] bg-white/40 backdrop-blur-xl border border-white/50 rounded-full shadow-[0_0_20px_rgba(83,41,0,0.3)] hover:scale-110 transition-transform duration-300"
+        aria-label="Chat on WhatsApp"
+      >
+        <MessageCircle size={28} className="text-[#532900]" fill="currentColor" />
+      </a>
+      <div className="absolute right-16 top-1/2 -translate-y-1/2 bg-white/60 backdrop-blur-xl border border-white/50 rounded-xl px-4 py-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap text-sm text-[#181d3a] font-medium">
+        Chat with us on WhatsApp
+      </div>
+    </div>
   );
 }

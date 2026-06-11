@@ -3,15 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
-import { Phone, Paintbrush, Menu, X } from "lucide-react";
+import { Phone, Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
-  { href: "/services/interior", label: "Interior" },
-  { href: "/gallery", label: "Gallery" },
-  { href: "/about", label: "About" },
+  { href: "/gallery", label: "Portfolio" },
+  { href: "/about", label: "About Us" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -35,73 +34,63 @@ export function Navbar() {
     return () => { document.body.style.overflow = ""; };
   }, [mobileOpen]);
 
+  const isActive = (href: string) =>
+    pathname === href || (href !== "/" && pathname.startsWith(href));
+
   return (
     <>
-      <nav
-        className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-[1320px] rounded-2xl transition-all duration-500 ${
+      <nav className={`fixed top-0 left-0 right-0 z-50 flex justify-center mt-6`}>
+        <div className={`mx-auto w-fit max-w-[90%] px-8 py-3 rounded-full transition-all duration-500 ${
           scrolled
-            ? "bg-white/80 backdrop-blur-2xl shadow-[0_8px_32px_rgba(15,30,61,0.12)] border border-white/20 py-3 top-3"
-            : "bg-white/10 backdrop-blur-md border border-white/20 py-4"
-        }`}
-      >
-        <div className="px-6 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2.5 group">
-            <span className="w-10 h-10 grid place-items-center bg-gradient-to-br from-accent to-gold rounded-[10px] text-white shadow-[0_4px_14px_rgba(232,93,4,0.4)] transition-all duration-500 group-hover:shadow-[0_8px_25px_rgba(232,93,4,0.6)] group-hover:scale-110">
-              <Paintbrush size={20} />
-            </span>
-            <span
-              className={`text-[22px] font-extrabold tracking-tight ${
-                scrolled ? "text-primary" : "text-white"
-              }`}
+            ? "bg-white/60 backdrop-blur-xl border border-white/50 shadow-[0_20px_40px_rgba(0,0,0,0.05)]"
+            : "bg-white/40 backdrop-blur-xl border border-white/50 shadow-[0_20px_40px_rgba(0,0,0,0.05)]"
+        }`}>
+          <div className="flex items-center justify-between gap-8">
+            <Link href="/" className="flex items-center gap-2 group shrink-0">
+              <span className="font-bold text-xl text-primary tracking-tight">
+                Gurukrupa Paint
+              </span>
+            </Link>
+
+            <ul className="hidden md:flex items-center gap-6">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className={`text-sm uppercase tracking-wider transition-all duration-300 ${
+                      isActive(link.href)
+                        ? "text-primary font-bold border-b-2 border-primary/50"
+                        : "text-[#46464d] hover:text-primary hover:scale-105"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <a
+              href="tel:+919594809030"
+              className="hidden md:inline-flex items-center gap-2 px-6 py-2 bg-[#181d3a] text-white text-xs uppercase tracking-wider font-semibold rounded-full hover:scale-105 transition-transform duration-300"
             >
-              Gurukrupa
-            </span>
-          </Link>
+              <Phone size={14} />
+              Get Free Quote
+            </a>
 
-          <ul className="hidden lg:flex items-center gap-1">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className={`px-4 py-2.5 rounded-full text-[15px] font-medium transition-all duration-300 ${
-                    pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href))
-                      ? "text-accent bg-accent/10"
-                      : scrolled
-                      ? "text-text/80 hover:text-accent hover:bg-accent/8"
-                      : "text-white/90 hover:text-white hover:bg-white/10"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-
-          <a
-            href="tel:+919594809030"
-            className={`hidden lg:inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold text-[14px] transition-all duration-300 ${
-              scrolled
-                ? "bg-gradient-to-r from-accent to-accent-dark text-white shadow-[0_8px_24px_rgba(232,93,4,0.35)] hover:shadow-[0_12px_32px_rgba(232,93,4,0.5)] hover:-translate-y-0.5 active:scale-95"
-                : "bg-white/15 text-white border border-white/30 backdrop-blur-md hover:bg-white hover:text-primary hover:scale-105 active:scale-95"
-            }`}
-          >
-            <Phone size={14} />
-            +91 9594809030
-          </a>
+            <button
+              className={`md:hidden w-11 h-11 grid place-items-center z-[60] rounded-full transition-all duration-300 ${
+                mobileOpen || scrolled
+                  ? "bg-primary/5 text-primary"
+                  : "bg-white/20 text-primary backdrop-blur-md"
+              }`}
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            >
+              {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+            </button>
+          </div>
         </div>
       </nav>
-
-      <button
-        className={`lg:hidden fixed top-[22px] right-[34px] w-11 h-11 grid place-items-center z-[60] rounded-full transition-all duration-300 ${
-          mobileOpen || scrolled
-            ? "bg-primary/5 text-primary hover:bg-primary/10"
-            : "bg-white/20 text-white backdrop-blur-md hover:bg-white/30"
-        }`}
-        onClick={() => setMobileOpen(!mobileOpen)}
-        aria-label={mobileOpen ? "Close menu" : "Open menu"}
-      >
-        {mobileOpen ? <X size={22} /> : <Menu size={22} />}
-      </button>
 
       <AnimatePresence>
         {mobileOpen && (
@@ -110,7 +99,7 @@ export function Navbar() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-primary/70 backdrop-blur-sm z-[55] lg:hidden"
+              className="fixed inset-0 bg-primary/60 backdrop-blur-sm z-[55] md:hidden"
               onClick={() => setMobileOpen(false)}
             />
             <motion.div
@@ -118,7 +107,7 @@ export function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-4 right-4 bottom-4 w-full max-w-[380px] bg-white/95 backdrop-blur-2xl z-[56] p-8 pt-24 rounded-3xl shadow-[-20px_0_60px_rgba(0,0,0,0.15)] border border-white/20 lg:hidden overflow-y-auto"
+              className="fixed top-4 right-4 bottom-4 w-full max-w-[380px] bg-white/95 backdrop-blur-2xl z-[56] p-8 pt-24 rounded-3xl shadow-[-20px_0_60px_rgba(0,0,0,0.15)] border border-white/20 md:hidden overflow-y-auto"
             >
               <ul className="flex flex-col gap-1">
                 {navLinks.map((link) => (
@@ -126,9 +115,9 @@ export function Navbar() {
                     <Link
                       href={link.href}
                       className={`block px-5 py-4 text-lg font-semibold rounded-2xl transition-all duration-300 ${
-                        pathname === link.href || (link.href !== "/" && pathname.startsWith(link.href))
-                          ? "bg-gradient-to-r from-accent/10 to-gold/10 text-accent pl-7 border-l-2 border-accent"
-                          : "text-text hover:bg-accent/5 hover:text-accent hover:pl-7"
+                        isActive(link.href)
+                          ? "bg-gradient-to-r from-[#c8cffe]/40 to-[#feb880]/20 text-primary pl-7 border-l-2 border-primary"
+                          : "text-[#46464d] hover:bg-[#c8cffe]/20 hover:text-primary hover:pl-7"
                       }`}
                     >
                       {link.label}
@@ -139,7 +128,7 @@ export function Navbar() {
               <div className="mt-6 flex flex-col gap-3">
                 <a
                   href="tel:+919594809030"
-                  className="flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-accent to-accent-dark text-white rounded-full font-semibold text-base shadow-[0_8px_24px_rgba(232,93,4,0.35)] hover:shadow-[0_12px_32px_rgba(232,93,4,0.5)] hover:-translate-y-0.5 active:scale-95 transition-all"
+                  className="flex items-center justify-center gap-2 px-6 py-4 bg-[#181d3a] text-white rounded-full font-semibold text-base shadow-lg hover:scale-[1.02] active:scale-95 transition-all"
                 >
                   <Phone size={18} />
                   Call Now

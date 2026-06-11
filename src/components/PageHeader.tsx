@@ -18,17 +18,16 @@ export function PageHeader({ eyebrow, title, subtitle, breadcrumb, bgImage, heig
       }`}
       style={{
         background: bgImage
-          ? `linear-gradient(135deg, rgba(15,30,61,0.92), rgba(8,21,48,0.95)), url(${bgImage}) center/cover no-repeat fixed`
-          : "linear-gradient(135deg, rgba(15,30,61,0.92), rgba(8,21,48,0.95))",
+          ? `linear-gradient(135deg, rgba(24,29,58,0.92), rgba(45,50,80,0.95)), url(${bgImage}) center/cover no-repeat fixed`
+          : "linear-gradient(135deg, rgba(24,29,58,0.92), rgba(45,50,80,0.95))",
       }}
     >
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(232,93,4,0.12),transparent_60%)]" />
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-[radial-gradient(circle,rgba(244,185,66,0.08),transparent_70%)] rounded-full" />
-      <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-[radial-gradient(circle,rgba(232,93,4,0.06),transparent_70%)] rounded-full" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(200,207,254,0.1),transparent_60%)]" />
+      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-[radial-gradient(circle,rgba(206,143,91,0.08),transparent_70%)] rounded-full" />
 
       <div className="relative z-10 max-w-[720px] mx-auto px-6 text-center">
-        <span className="inline-flex items-center gap-3 text-[13px] font-semibold tracking-[3px] uppercase text-gold mb-4 bg-white/5 backdrop-blur-sm px-5 py-2 rounded-full border border-white/10">
-          <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
+        <span className="inline-flex items-center gap-3 text-[13px] font-semibold tracking-[3px] uppercase text-[#ce8f5b] mb-4 bg-white/5 backdrop-blur-sm px-5 py-2 rounded-full border border-white/10">
+          <span className="w-2 h-2 rounded-full bg-[#532900] animate-pulse" />
           {eyebrow}
         </span>
         <h1 className="text-[clamp(36px,5vw,56px)] font-extrabold text-white mb-4 tracking-tight leading-[1.1]">
@@ -43,7 +42,7 @@ export function PageHeader({ eyebrow, title, subtitle, breadcrumb, bgImage, heig
               <span key={i} className="flex items-center gap-2.5">
                 {i > 0 && <ChevronRight size={10} className="opacity-40" />}
                 {item.href ? (
-                  <Link href={item.href} className="hover:text-gold transition-colors">
+                  <Link href={item.href} className="hover:text-[#ce8f5b] transition-colors">
                     {item.label}
                   </Link>
                 ) : (

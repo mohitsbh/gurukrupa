@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Get Your Free Quote | Gurukrupa Painting Services</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Poppins -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-surface": "#2f3131",
+                      "on-tertiary-fixed-variant": "#6a3b0e",
+                      "background": "#f9f9f9",
+                      "tertiary-fixed": "#ffdcc3",
+                      "secondary-container": "#c8cffe",
+                      "on-secondary-fixed-variant": "#3d446b",
+                      "primary-fixed-dim": "#c0c4ea",
+                      "on-primary-fixed": "#141936",
+                      "on-background": "#1a1c1c",
+                      "on-secondary-container": "#50577f",
+                      "secondary": "#555c84",
+                      "inverse-primary": "#c0c4ea",
+                      "on-primary-fixed-variant": "#404564",
+                      "primary": "#181d3a",
+                      "surface-container-low": "#f3f3f3",
+                      "on-primary-container": "#969abe",
+                      "surface-container": "#eeeeee",
+                      "on-surface": "#1a1c1c",
+                      "on-tertiary-container": "#ce8f5b",
+                      "outline": "#77767e",
+                      "on-error-container": "#93000a",
+                      "tertiary": "#341800",
+                      "on-surface-variant": "#46464d",
+                      "outline-variant": "#c7c5ce",
+                      "surface-tint": "#585c7d",
+                      "secondary-fixed": "#dee1ff",
+                      "tertiary-container": "#532900",
+                      "tertiary-fixed-dim": "#feb880",
+                      "surface-dim": "#dadada",
+                      "primary-container": "#2d3250",
+                      "surface": "#f9f9f9",
+                      "on-tertiary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "primary-fixed": "#dee0ff",
+                      "on-secondary-fixed": "#11183d",
+                      "surface-variant": "#e2e2e2",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-fixed": "#2f1500",
+                      "on-primary": "#ffffff",
+                      "surface-container-highest": "#e2e2e2",
+                      "surface-container-high": "#e8e8e8",
+                      "on-secondary": "#ffffff",
+                      "surface-bright": "#f9f9f9",
+                      "error": "#ba1a1a",
+                      "inverse-on-surface": "#f1f1f1",
+                      "secondary-fixed-dim": "#bdc4f2"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "margin-desktop": "80px",
+                      "container-max": "1280px",
+                      "base": "8px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "label-caps": ["Poppins"],
+                      "display-lg": ["Poppins"],
+                      "display-lg-mobile": ["Poppins"],
+                      "headline-sm": ["Poppins"],
+                      "body-lg": ["Poppins"],
+                      "body-md": ["Poppins"],
+                      "headline-md": ["Poppins"]
+              },
+              "fontSize": {
+                      "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                      "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        }
+        .glass-border-gradient {
+            border: 1px solid;
+            border-image-source: linear-gradient(to bottom right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+            border-image-slice: 1;
+        }
+        .primary-gradient-btn {
+            background: linear-gradient(135deg, #181d3a 0%, #2d3250 100%);
+            transition: all 0.3s ease;
+        }
+        .primary-gradient-btn:hover {
+            transform: scale(1.02);
+            filter: brightness(1.2);
+        }
+        .floating-blob {
+            position: fixed;
+            z-index: -1;
+            filter: blur(80px);
+            opacity: 0.4;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed-dim selection:text-primary overflow-x-hidden">
+<!-- Atmospheric Background Blobs -->
+<div class="floating-blob w-[500px] h-[500px] bg-secondary-container top-[-100px] left-[-100px] animate-pulse"></div>
+<div class="floating-blob w-[400px] h-[400px] bg-tertiary-fixed bottom-[-100px] right-[-100px] animate-pulse" style="animation-delay: 2s;"></div>
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center gap-12 bg-white/40 backdrop-blur-xl rounded-full mt-6 mx-auto w-fit max-w-[90%] px-8 py-3 border border-white/50 shadow-[0_20px_40px_rgba(0,0,0,0.05)]">
+<div class="font-display-lg text-headline-sm font-bold text-primary tracking-tight">Gurukrupa Paint</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md uppercase tracking-wider text-on-surface-variant hover:scale-105 transition-transform duration-300 hover:text-primary" href="#">Services</a>
+<a class="font-body-md text-body-md uppercase tracking-wider text-on-surface-variant hover:scale-105 transition-transform duration-300 hover:text-primary" href="#">Portfolio</a>
+<a class="font-body-md text-body-md uppercase tracking-wider text-on-surface-variant hover:scale-105 transition-transform duration-300 hover:text-primary" href="#">Process</a>
+<a class="font-body-md text-body-md uppercase tracking-wider text-on-surface-variant hover:scale-105 transition-transform duration-300 hover:text-primary" href="#">About Us</a>
+<a class="font-body-md text-body-md uppercase tracking-wider text-primary font-bold border-b-2 border-primary/50 hover:scale-105 transition-transform duration-300" href="#">Contact</a>
+</div>
+<button class="primary-gradient-btn text-on-primary px-6 py-2 rounded-full font-label-caps text-label-caps">Get Quote</button>
+</nav>
+<main class="pt-32 pb-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Hero Title -->
+<header class="text-center mb-16 relative">
+<span class="inline-block px-4 py-1 rounded-full bg-tertiary-container text-on-tertiary font-label-caps text-label-caps mb-4 animate-bounce">
+                ESTABLISHED 1992
+            </span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">
+                Get Your Free Quote Today
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Transform your space with Mumbai's premier painting specialists. From luxury homes to commercial complexes, we deliver excellence in every stroke.
+            </p>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Contact Form Section -->
+<section class="lg:col-span-7">
+<div class="glass-card rounded-[32px] p-8 md:p-12">
+<form action="#" class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant ml-1">Your Full Name</label>
+<input class="w-full bg-white/20 border-white/50 focus:border-primary focus:ring-2 focus:ring-primary/20 rounded-xl px-4 py-3 outline-none transition-all font-body-md text-body-md" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant ml-1">Phone Number</label>
+<input class="w-full bg-white/20 border-white/50 focus:border-primary focus:ring-2 focus:ring-primary/20 rounded-xl px-4 py-3 outline-none transition-all font-body-md text-body-md" placeholder="+91 98XXX XXXXX" type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant ml-1">Service Type</label>
+<select class="w-full bg-white/20 border-white/50 focus:border-primary focus:ring-2 focus:ring-primary/20 rounded-xl px-4 py-3 outline-none transition-all font-body-md text-body-md appearance-none">
+<option>Residential Painting</option>
+<option>Commercial Detailing</option>
+<option>Waterproofing Solutions</option>
+<option>Designer Texture Walls</option>
+<option>Annual Maintenance</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant ml-1">How can we help?</label>
+<textarea class="w-full bg-white/20 border-white/50 focus:border-primary focus:ring-2 focus:ring-primary/20 rounded-xl px-4 py-3 outline-none transition-all font-body-md text-body-md" placeholder="Describe your project details..." rows="4"></textarea>
+</div>
+<button class="w-full primary-gradient-btn text-on-primary font-headline-sm text-headline-sm py-4 rounded-2xl shadow-xl hover:shadow-primary/20" type="submit">
+                            Request My Free Estimate
+                        </button>
+</form>
+</div>
+</section>
+<!-- Details & Map Column -->
+<aside class="lg:col-span-5 space-y-gutter">
+<!-- Contact Details Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
+<!-- Phone -->
+<div class="glass-card p-6 rounded-2xl flex items-center gap-4 group cursor-pointer hover:scale-105 transition-all duration-300">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Call Us</p>
+<p class="font-headline-sm text-headline-sm text-primary">+91 22 2543 8989</p>
+</div>
+</div>
+<!-- WhatsApp -->
+<div class="glass-card p-6 rounded-2xl flex items-center gap-4 group cursor-pointer hover:scale-105 transition-all duration-300">
+<div class="w-12 h-12 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant">WhatsApp Support</p>
+<p class="font-headline-sm text-headline-sm text-primary">Chat Now</p>
+</div>
+</div>
+<!-- Email -->
+<div class="glass-card p-6 rounded-2xl flex items-center gap-4 group cursor-pointer hover:scale-105 transition-all duration-300">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Email Us</p>
+<p class="font-headline-sm text-headline-sm text-primary">info@gurukrupa.in</p>
+</div>
+</div>
+</div>
+<!-- Map Placeholder -->
+<div class="glass-card rounded-[32px] overflow-hidden aspect-video relative group">
+<img class="w-full h-full object-cover brightness-75 group-hover:scale-110 transition-transform duration-700" data-alt="A high-quality, professional architectural map visualization of Mumbai and Thane regions, styled with a modern glassmorphism overlay. The map features elegant muted tones of blue and silver, with glowing primary color accents highlighting service centers. The aesthetic is clean and premium, perfectly matching a high-end luxury contracting business brand identity." data-location="Mumbai" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyCII8275dFwvfE78qnear2MXQO2DJuZq7Gd_ECUFc1VcmG-4JMcv6ahgz7wnX_4fR0dvcsE5r7Tkgd1nAAqqGPUOSPvWMiyD2_rIjZQOjnG2Hb1ev0YQ-fCJa8kZgbqsRuax67qGVAhacBA1OrFjhIcjD3Kmhep3d-MkHXWoYt7otDFytHWau27pCPbW3Y2yw1L-czdW75k5wqusJSqFFYxe6_xJSWcIqEOyHqN7ixrKMnbhhhXzao_DX14jQRjsELUV5gRe69kY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex items-end p-8">
+<div>
+<p class="text-white font-headline-sm text-headline-sm">Mumbai &amp; Thane</p>
+<p class="text-white/80 font-body-md text-body-md">Serving the entire metropolitan region since 1992.</p>
+</div>
+</div>
+</div>
+</aside>
+</div>
+<!-- Trust Badges / Clients Section -->
+<section class="mt-24 border-t border-outline-variant pt-16">
+<h2 class="text-center font-label-caps text-label-caps text-outline mb-12 uppercase tracking-[0.2em]">Our Heritage of Trust</h2>
+<div class="flex flex-wrap justify-center items-center gap-12 opacity-60 grayscale hover:grayscale-0 transition-all">
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-[48px] text-primary" data-icon="workspace_premium">workspace_premium</span>
+<span class="font-label-caps text-label-caps">30+ Years</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-[48px] text-primary" data-icon="verified">verified</span>
+<span class="font-label-caps text-label-caps">ISO Certified</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-[48px] text-primary" data-icon="home_repair_service">home_repair_service</span>
+<span class="font-label-caps text-label-caps">10k+ Projects</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-[48px] text-primary" data-icon="handshake">handshake</span>
+<span class="font-label-caps text-label-caps">Asian Paints Pro</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Side/Floating WhatsApp NavBar -->
+<a class="fixed bottom-8 right-8 z-[100] bg-white/40 backdrop-blur-xl rounded-full p-4 border border-white/50 animate-pulse hover:scale-110 transition-transform duration-300 shadow-[0_0_20px_rgba(83,41,0,0.3)] flex flex-col items-center gap-1 group" href="https://wa.me/912225438989" target="_blank">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary shadow-lg">
+<span class="material-symbols-outlined text-[24px]" data-icon="chat">chat</span>
+</div>
+<div class="hidden group-hover:block pr-4 transition-all">
+<p class="font-label-caps text-label-caps text-tertiary-container">Instant Estimate</p>
+<p class="font-body-md text-[14px] text-on-surface-variant font-bold">Message Now</p>
+</div>
+</div>
+</a>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant w-full pt-20 pb-10">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- Brand -->
+<div class="space-y-6">
+<div class="font-display-lg text-headline-md text-primary">Gurukrupa Paint</div>
+<p class="font-body-md text-on-surface-variant">Elevating Mumbai's aesthetics since 1992. Professional interior and exterior painting services for residential and commercial clients.</p>
+</div>
+<!-- Services Links -->
+<div class="space-y-4">
+<h4 class="font-headline-sm text-[18px] text-primary">Core Services</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Residential Painting</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Commercial Detailing</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Waterproofing</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Texture Walls</a></li>
+</ul>
+</div>
+<!-- Reach Us -->
+<div class="space-y-4">
+<h4 class="font-headline-sm text-[18px] text-primary">Our Locations</h4>
+<ul class="space-y-2">
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Contact Mumbai</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Contact Thane</a></li>
+</ul>
+</div>
+<!-- Contact/Social -->
+<div class="space-y-4">
+<h4 class="font-headline-sm text-[18px] text-primary">Support</h4>
+<p class="font-body-md text-on-surface-variant">Available Monday-Saturday: 9 AM to 7 PM IST</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-125 transition-transform" data-icon="share">share</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-125 transition-transform" data-icon="photo_camera">photo_camera</span>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-16 pt-8 border-t border-outline-variant text-center">
+<p class="font-body-md text-on-surface-variant">© 1992-2024 Gurukrupa Painting Services. Excellence in Mumbai &amp; Thane.</p>
+</div>
+</footer>
+<script>
+        // Micro-interaction for inputs
+        document.querySelectorAll('input, textarea, select').forEach(el => {
+            el.addEventListener('focus', () => {
+                el.parentElement.style.transform = 'translateY(-2px)';
+            });
+            el.addEventListener('blur', () => {
+                el.parentElement.style.transform = 'translateY(0px)';
+            });
+        });
+    </script>
+</body></html>

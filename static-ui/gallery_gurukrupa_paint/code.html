@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portfolio of Excellence | Gurukrupa Paint</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#2f3131",
+                        "on-tertiary-fixed-variant": "#6a3b0e",
+                        "background": "#f9f9f9",
+                        "tertiary-fixed": "#ffdcc3",
+                        "secondary-container": "#c8cffe",
+                        "on-secondary-fixed-variant": "#3d446b",
+                        "primary-fixed-dim": "#c0c4ea",
+                        "on-primary-fixed": "#141936",
+                        "on-background": "#1a1c1c",
+                        "on-secondary-container": "#50577f",
+                        "secondary": "#555c84",
+                        "inverse-primary": "#c0c4ea",
+                        "on-primary-fixed-variant": "#404564",
+                        "primary": "#181d3a",
+                        "surface-container-low": "#f3f3f3",
+                        "on-primary-container": "#969abe",
+                        "surface-container": "#eeeeee",
+                        "on-surface": "#1a1c1c",
+                        "on-tertiary-container": "#ce8f5b",
+                        "outline": "#77767e",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#341800",
+                        "on-surface-variant": "#46464d",
+                        "outline-variant": "#c7c5ce",
+                        "surface-tint": "#585c7d",
+                        "secondary-fixed": "#dee1ff",
+                        "tertiary-container": "#532900",
+                        "tertiary-fixed-dim": "#feb880",
+                        "surface-dim": "#dadada",
+                        "primary-container": "#2d3250",
+                        "surface": "#f9f9f9",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#dee0ff",
+                        "on-secondary-fixed": "#11183d",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#2f1500",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface-container-high": "#e8e8e8",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f9f9f9",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#f1f1f1",
+                        "secondary-fixed-dim": "#bdc4f2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "margin-desktop": "80px",
+                        "container-max": "1280px",
+                        "base": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Poppins"],
+                        "display-lg": ["Poppins"],
+                        "display-lg-mobile": ["Poppins"],
+                        "headline-sm": ["Poppins"],
+                        "body-lg": ["Poppins"],
+                        "body-md": ["Poppins"],
+                        "headline-md": ["Poppins"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .dark .glass-panel {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+        }
+        .image-zoom-container:hover img {
+            transform: scale(1.08);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #181d3a;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary selection:text-white">
+<!-- TopNavBar Component -->
+<nav class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center gap-12 bg-white/40 dark:bg-black/40 backdrop-blur-xl rounded-full mt-6 mx-auto w-fit max-w-[90%] px-8 py-3 border border-white/50 dark:border-white/10 shadow-[0_20px_40px_rgba(0,0,0,0.05)]">
+<div class="font-display-lg text-headline-sm font-bold text-primary dark:text-on-primary-fixed tracking-tight">Gurukrupa Paint</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-body-md text-body-md uppercase tracking-wider text-on-surface-variant dark:text-on-secondary-fixed-variant hover:scale-105 transition-transform duration-300 hover:text-primary" href="#">Services</a>
+<a class="font-body-md text-body-md uppercase tracking-wider text-primary dark:text-primary-fixed font-bold border-b-2 border-primary/50 hover:scale-105 transition-transform duration-300" href="#">Portfolio</a>
+<a class="font-body-md text-body-md uppercase tracking-wider text-on-surface-variant dark:text-on-secondary-fixed-variant hover:scale-105 transition-transform duration-300 hover:text-primary" href="#">Process</a>
+<a class="font-body-md text-body-md uppercase tracking-wider text-on-surface-variant dark:text-on-secondary-fixed-variant hover:scale-105 transition-transform duration-300 hover:text-primary" href="#">About Us</a>
+<a class="font-body-md text-body-md uppercase tracking-wider text-on-surface-variant dark:text-on-secondary-fixed-variant hover:scale-105 transition-transform duration-300 hover:text-primary" href="#">Contact</a>
+</div>
+<button class="bg-primary text-white px-6 py-2 rounded-full font-bold hover:scale-105 active:scale-95 transition-all shadow-lg">Get Quote</button>
+</nav>
+<main class="pt-32 pb-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Hero Section -->
+<header class="mb-16 text-center max-w-3xl mx-auto">
+<span class="font-label-caps text-label-caps text-primary/60 uppercase tracking-widest mb-4 block">Our Legacy Since 1992</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">Portfolio of Excellence</h1>
+<p class="text-body-lg text-on-surface-variant leading-relaxed">
+                Witness the transformation of Mumbai and Thane's finest spaces. From heritage restorations to modern commercial façades, our precision is our signature.
+            </p>
+</header>
+<!-- Category Filters -->
+<section class="flex flex-wrap justify-center gap-4 mb-12">
+<button class="glass-panel px-8 py-3 rounded-full font-bold text-primary border-primary transition-all hover:bg-primary hover:text-white">All</button>
+<button class="glass-panel px-8 py-3 rounded-full text-on-surface-variant hover:text-primary transition-all">Interior</button>
+<button class="glass-panel px-8 py-3 rounded-full text-on-surface-variant hover:text-primary transition-all">Exterior</button>
+<button class="glass-panel px-8 py-3 rounded-full text-on-surface-variant hover:text-primary transition-all">Commercial</button>
+</section>
+<!-- Portfolio Bento Grid -->
+<div class="portfolio-grid">
+<!-- Project 1 (Large) -->
+<div class="relative group overflow-hidden rounded-3xl h-[500px] md:col-span-2 image-zoom-container">
+<img class="w-full h-full object-cover transition-transform duration-700" data-alt="A luxury living room in a Mumbai high-rise featuring premium velvet-finish interior painting in deep navy and gold accents. The space is illuminated by soft architectural lighting that highlights the smooth texture of the walls. The overall aesthetic is one of opulence and modern sophistication with high-end furniture and panoramic city views." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0Y7Zpk4ToYquaYkp6-XS83CasX4TfMgMiFdVDiOFJQV_Udhp_9OC1CHKJ42-ehdGqV1DLD0HLmEYoNxZGcQP_GqCGFnWJeGYgEW9Odj8PYzDzKdWthSOA30EBa2hg_TAOMPPYxAUfTIzpz8xGg3GwF3aj9urzOnOBUiJ6oaT6AN2a1g4ho3jWgRCqMuzo7kQ08AkcNbk37t_3vjBhpKezhA9qNBhmrcYuaOf4L6CgLmubaaaLyQE5wOWN0KgjEWFxLPK3SqeLufA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
+<div class="glass-panel p-6 rounded-2xl w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<span class="text-white/70 text-xs font-bold uppercase tracking-widest">Interior • Mumbai South</span>
+<h3 class="text-white text-headline-sm font-bold mt-1">Regency Sky-Villa</h3>
+<p class="text-white/80 text-sm mt-2">Premium Royal Silk finish with custom gold leaf detailing on cornice moldings.</p>
+<div class="mt-4 flex items-center text-white text-sm font-semibold cursor-pointer">
+                            View Details <span class="material-symbols-outlined ml-1 text-sm">open_in_full</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="relative group overflow-hidden rounded-3xl h-[500px] image-zoom-container">
+<img class="w-full h-full object-cover transition-transform duration-700" data-alt="Modern minimalist villa exterior in Thane showing crisp white textured weather-shield painting against a clear blue sky. The architecture features clean lines, wooden slats, and large glass windows. Sunlight creates sharp geometric shadows on the perfectly finished walls, emphasizing the expert craftsmanship of the paint application." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu-jsnCNED6k57GINF9qYb5JPXfXOyhcoRhBY3yVT_SxWf97fuQKQb5ZiF9R8j0DGNUBZEZPGJQ2aM4RiE360fwOK-lww39zfuxnjO2pI6AyGRVBOuboUabN_h-oxrmpcLRC-E8VU9bcaJO0U1nUgw509MxryuxiFDw4kzumYhaxGgxJDMD4lSuez31SP-u48kVDTAku98DG91IrytTLOZ9VWsBxUHdxHeBBlX_CSILSIvfcX-r6DpBNjs9z6eY6z6tfKOssHHJqs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+<div class="glass-panel p-5 rounded-2xl w-full">
+<span class="text-white/70 text-xs font-bold uppercase tracking-widest">Exterior • Thane</span>
+<h3 class="text-white text-headline-sm font-bold mt-1">The Zenith Estate</h3>
+</div>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="relative group overflow-hidden rounded-3xl h-[400px] image-zoom-container">
+<img class="w-full h-full object-cover transition-transform duration-700" data-alt="Sophisticated commercial office lobby in Mumbai with a palette of grey and teal textured wall finishes. The space uses cool, professional lighting to showcase the durability and professional sheen of the paint. Polished marble floors reflect the wall colors, creating a sense of professional excellence and high-end corporate identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCecv1xJcPYx4oJbadkPXmH-q01O0FAY_mzhONQJjOJzRRY3JNp_1l_N090EnI0mnFFqkJ5N0aLT1voBzlqjp5atlKQ7g8m8oR_vBfbJOtuyPajUIJQ9XwXabQvO-4FxPPlxfjSpWhHVJlexWcteVpa-HwHRnzTR-U-vVRNLsvyy3cOO88K8psASYy1iTT4-3NzhqlO8l_nV7rPyzD_OWxpV_684CAICW1fr7c3oJn0QlAJ1vP66xkSf2PgQ4xw5T4ziHP1eZFAeeE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+<div class="glass-panel p-5 rounded-2xl w-full">
+<span class="text-white/70 text-xs font-bold uppercase tracking-widest">Commercial • BKC</span>
+<h3 class="text-white text-headline-sm font-bold mt-1">Nova Corporate Plaza</h3>
+</div>
+</div>
+</div>
+<!-- Project 4 (Vertical) -->
+<div class="relative group overflow-hidden rounded-3xl h-[400px] image-zoom-container">
+<img class="w-full h-full object-cover transition-transform duration-700" data-alt="Close-up of a designer accent wall featuring intricate Venetian plastering technique in earthy terracotta tones. The texture is rich and organic, with soft warm lighting highlighting the depth of the material. This artisanal finish demonstrates the high level of specialized skill provided for luxury residential interiors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8DxfWMm7VIiTqdiiMwG3ZyJFfxXnetKo1JYtC1SOGtC2mIDO-f85QpwFjZP451a0NzBffDGIhsXUGT3ewAqIvm_wvPHlgjaX-l3CBKQuGdFZ27QoIlv-uvzdgMUKt_QgI_T6O4JLiyX85poLPvTIojGV9Sh2B0YEs9aLqg32n9NvRsxNA44HRttP5gwOTphqTbgZhC7CIumY_ThkfJXzpEi6dsrGTWrOV6I8FS7jFoNxQKl0zVgj7d-SLGYh3zkEOy3MmIDoFKug"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+<div class="glass-panel p-5 rounded-2xl w-full">
+<span class="text-white/70 text-xs font-bold uppercase tracking-widest">Texture • Colaba</span>
+<h3 class="text-white text-headline-sm font-bold mt-1">Venetian Heritage</h3>
+</div>
+</div>
+</div>
+<!-- Project 5 (Wide) -->
+<div class="relative group overflow-hidden rounded-3xl h-[400px] image-zoom-container">
+<img class="w-full h-full object-cover transition-transform duration-700" data-alt="Night-time shot of a large residential complex exterior in Mumbai, beautifully illuminated by architectural spotlights. The weather-proof painting in neutral tones appears flawless even under harsh directional light. The contrast between the warm lights and the cool night sky emphasizes the clean, protective finish of the exterior coating." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc9sd6t4KGgytYwznQOUvyrI3XSJWtz8VaNgBSiaBzwqluT2yTFuyfKWoXTG-oKpLrMQvm2qw-3np7t3PQzZE9_twKI7qBE0a_DK006HEYFnB5UTeWVARQ67i25NlVvJjLoXX6Z-CyLvjeHjEHQSk7b646b0WrXHhrG37HZNfLy6g1k5HqQO2DwB3CKBIhwaeRC6-B-TreX1389YW1Ro6gpWa9isNx87VMYul-Rn95JvWlpaARFdhSl_39NN83FtUATiFspTpT0ns"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+<div class="glass-panel p-5 rounded-2xl w-full">
+<span class="text-white/70 text-xs font-bold uppercase tracking-widest">Exterior • Powai</span>
+<h3 class="text-white text-headline-sm font-bold mt-1">Lakeside Towers</h3>
+</div>
+</div>
+</div>
+</div>
+<!-- Trust Badges Floating Section -->
+<div class="mt-20 glass-panel p-12 rounded-[40px] flex flex-col md:flex-row items-center justify-around gap-8 text-center border-white/20">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-primary text-5xl mb-3">verified</span>
+<span class="font-display-lg text-headline-md text-primary">30+ Years</span>
+<span class="text-on-surface-variant font-medium">Expert Heritage</span>
+</div>
+<div class="w-px h-16 bg-outline-variant hidden md:block"></div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-primary text-5xl mb-3">location_on</span>
+<span class="font-display-lg text-headline-md text-primary">5000+</span>
+<span class="text-on-surface-variant font-medium">Projects in Mumbai &amp; Thane</span>
+</div>
+<div class="w-px h-16 bg-outline-variant hidden md:block"></div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-primary text-5xl mb-3">workspace_premium</span>
+<span class="font-display-lg text-headline-md text-primary">100%</span>
+<span class="text-on-surface-variant font-medium">Premium Finish Warranty</span>
+</div>
+</div>
+</main>
+<!-- SideNavBar (WhatsApp) -->
+<a class="fixed bottom-8 right-8 z-[100] group flex items-center gap-3" href="https://wa.me/911234567890" target="_blank">
+<div class="bg-white/40 dark:bg-black/40 backdrop-blur-xl rounded-full p-4 border border-white/50 dark:border-white/10 shadow-[0_0_20px_rgba(83,41,0,0.3)] animate-pulse hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-tertiary-container dark:text-tertiary-fixed-dim text-3xl">chat</span>
+</div>
+<div class="bg-primary text-white px-4 py-2 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-xl whitespace-nowrap hidden md:block">
+<div class="text-xs font-bold uppercase tracking-widest">Instant Estimate</div>
+<div class="text-sm">Message Now</div>
+</div>
+</a>
+<!-- Footer Component -->
+<footer class="bg-surface-container-lowest dark:bg-inverse-surface border-t border-outline-variant dark:border-outline w-full pt-20 pb-10">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-1">
+<div class="font-display-lg text-headline-md text-primary dark:text-on-primary-fixed mb-6">Gurukrupa Paint</div>
+<p class="text-on-surface-variant dark:text-outline-variant text-body-md mb-6 leading-relaxed">
+                    Transforming spaces with precision and passion since 1992. The gold standard in luxury painting services across the metropolis.
+                </p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-primary dark:text-primary-fixed uppercase tracking-widest text-sm">Services</h4>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Residential Painting</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Commercial Detailing</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Waterproofing</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Texture Walls</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-primary dark:text-primary-fixed uppercase tracking-widest text-sm">Locations</h4>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Contact Mumbai</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Contact Thane</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Navi Mumbai Office</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-primary dark:text-primary-fixed uppercase tracking-widest text-sm">Connect</h4>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">face_nod</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">photo_camera</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">alternate_email</span>
+</div>
+<div class="mt-4 p-4 glass-panel rounded-xl">
+<p class="text-xs font-bold text-primary mb-1">Office Hours</p>
+<p class="text-sm text-on-surface-variant">Mon - Sat: 9 AM - 8 PM</p>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-16 pt-8 border-t border-outline-variant/30 text-center md:text-left">
+<p class="text-on-surface-variant dark:text-outline-variant font-body-md">© 1992-2024 Gurukrupa Painting Services. Excellence in Mumbai &amp; Thane.</p>
+</div>
+</footer>
+<!-- Visual Only Lightbox Script Simulation -->
+<script>
+        document.querySelectorAll('.image-zoom-container').forEach(card => {
+            card.addEventListener('click', () => {
+                const img = card.querySelector('img').src;
+                const title = card.querySelector('h3').innerText;
+                console.log(`Open lightbox for: ${title}`);
+                // In a real app, this would trigger a modal
+            });
+        });
+
+        // Hover animation for filters
+        const buttons = document.querySelectorAll('button.glass-panel');
+        buttons.forEach(btn => {
+            btn.addEventListener('mouseenter', () => {
+                btn.style.transform = 'translateY(-2px)';
+            });
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body></html>
